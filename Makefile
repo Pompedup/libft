@@ -6,7 +6,7 @@
 #    By: abezanni <abezanni@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/11/09 17:32:49 by abezanni          #+#    #+#              #
-#    Updated: 2018/02/26 18:04:49 by abezanni         ###   ########.fr        #
+#    Updated: 2018/03/16 16:02:52 by abezanni         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -47,6 +47,7 @@ SRC =	ft_atoi.c\
 		ft_putendl.c\
 		ft_putnbr_fd.c\
 		ft_putnbr.c\
+		ft_putnbrendl.c\
 		ft_putstr_fd.c\
 		ft_putstr.c\
 		ft_str_is_lowercase.c\

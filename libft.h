@@ -6,7 +6,7 @@
 /*   By: abezanni <abezanni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/06 17:43:03 by abezanni          #+#    #+#             */
-/*   Updated: 2018/02/26 17:50:34 by abezanni         ###   ########.fr       */
+/*   Updated: 2018/03/16 16:03:07 by abezanni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,6 +61,7 @@ void				ft_putendl_fd(char const *s, int fd);
 void				ft_putendl(char const *s);
 void				ft_putnbr_fd(int n, int fd);
 void				ft_putnbr(int n);
+void				ft_putnbrendl(int n);
 void				ft_putstr_fd(char const *s, int fd);
 void				ft_putstr(char const *s);
 int					ft_str_is_lowercase(char *str);
