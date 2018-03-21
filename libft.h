@@ -6,7 +6,7 @@
 /*   By: abezanni <abezanni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/06 17:43:03 by abezanni          #+#    #+#             */
-/*   Updated: 2018/03/16 16:03:07 by abezanni         ###   ########.fr       */
+/*   Updated: 2018/03/21 12:25:54 by abezanni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,14 @@
 # include <string.h>
 # include <stdlib.h>
 # include <unistd.h>
+
+# define ISDIGIT &ft_isdigit
+# define ISALPHA &ft_isalpha
+# define ISASCII &ft_isascii
+# define ISALNUM &ft_isalnum
+# define ISLOWER &ft_islower
+# define ISUPPER &ft_isupper
+# define ISPRINT &ft_isprint
 
 typedef struct		s_list{
 	void			*content;
@@ -64,8 +72,6 @@ void				ft_putnbr(int n);
 void				ft_putnbrendl(int n);
 void				ft_putstr_fd(char const *s, int fd);
 void				ft_putstr(char const *s);
-int					ft_str_is_lowercase(char *str);
-int					ft_str_is_uppercase(char *str);
 char				*ft_strcat(char *dst, const char *src);
 char				*ft_strchr(const char *s, int c);
 void				ft_strclr(char *s);
@@ -77,6 +83,7 @@ char				*ft_strdup(const char *s1);
 int					ft_strequ(char const *s1, char const *s2);
 void				ft_striter(char *s, void (*f)(char *));
 void				ft_striteri(char *s, void (*f)(unsigned int, char *));
+int					ft_strisall(char *str, int	(*f)(int c));
 char				*ft_strjoin(char const *s1, char const *s2);
 size_t				ft_strlcat(char *dst, const char *src, size_t size);
 size_t				ft_strlen(const char *s);

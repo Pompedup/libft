@@ -1,22 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_str_is_uppercase.c                              :+:      :+:    :+:   */
+/*   ft_strisall.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: abezanni <abezanni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/11/16 12:28:14 by abezanni          #+#    #+#             */
-/*   Updated: 2017/11/16 13:25:13 by abezanni         ###   ########.fr       */
+/*   Created: 2018/03/20 17:24:23 by abezanni          #+#    #+#             */
+/*   Updated: 2018/03/21 14:19:50 by abezanni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_str_is_uppercase(char *str)
+int	ft_strisall(char *str, int	(*f)(int c))
 {
-	while (*str)
+	if (!*str)
+		return (0);
+	while(*str)
 	{
-		if (!ft_isupper(*str))
+		if (!f(*str))
 			return (0);
 		str++;
 	}
