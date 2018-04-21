@@ -6,7 +6,7 @@
 /*   By: abezanni <abezanni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/04/18 15:15:24 by abezanni          #+#    #+#             */
-/*   Updated: 2018/04/18 16:24:19 by abezanni         ###   ########.fr       */
+/*   Updated: 2018/04/21 15:18:35 by abezanni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,10 +29,25 @@ static	int ft_nb_words(char *str, char *charset)
 char	**ft_split_charset(char *str, char *charset)
 {
 	char	**back;
-	int		nb_words;
+	int		size_words;
+	int		i;
 
-	nb_words = ft_nb_words(str, charset);
-	if (!(str && charset) || !(back = malloc(sizeof(char*) * ((nb_words + 1)))))
+	if (!(str && charset) || !(back = malloc(sizeof(char*) * ((ft_nb_words(str, charset) + 1)))))
 		return (NULL);
+	i = 0;
+	while (*str)
+	{
+		size_words = 0;
+		while (ft_strchr(charset, *str))
+			str++;
+		while (*str && !ft_strchr(charset, *str))
+		{
+			str++;
+			size_words++;
+		}
+		if (size_words)
+			back[i++] = ft_strndup(str - size_words, size_words);
+	}
+	back[i] = NULL;
 	return (back);
 }

@@ -6,7 +6,7 @@
 /*   By: abezanni <abezanni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/06 17:43:03 by abezanni          #+#    #+#             */
-/*   Updated: 2018/03/22 12:25:51 by abezanni         ###   ########.fr       */
+/*   Updated: 2018/04/21 15:17:48 by abezanni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -73,6 +73,7 @@ void				ft_putnbr(int n);
 void				ft_putnbrendl(int n);
 void				ft_putstr_fd(char const *s, int fd);
 void				ft_putstr(char const *s);
+char				**ft_split_charset(char *str, char *charset);
 char				*ft_strcat(char *dst, const char *src);
 char				*ft_strchr(const char *s, int c);
 void				ft_strclr(char *s);

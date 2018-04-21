@@ -6,7 +6,7 @@
 #    By: abezanni <abezanni@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/11/09 17:32:49 by abezanni          #+#    #+#              #
-#    Updated: 2018/03/21 12:25:19 by abezanni         ###   ########.fr        #
+#    Updated: 2018/04/21 15:18:19 by abezanni         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -50,6 +50,7 @@ SRC =	ft_atoi.c\
 		ft_putnbrendl.c\
 		ft_putstr_fd.c\
 		ft_putstr.c\
+		ft_split_charset.c\
 		ft_strcat.c\
 		ft_strchar.c\
 		ft_strchr.c\
