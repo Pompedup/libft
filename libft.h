@@ -6,7 +6,7 @@
 /*   By: abezanni <abezanni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/06 17:43:03 by abezanni          #+#    #+#             */
-/*   Updated: 2018/04/21 15:17:48 by abezanni         ###   ########.fr       */
+/*   Updated: 2018/04/21 15:31:17 by abezanni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -76,6 +76,7 @@ void				ft_putstr(char const *s);
 char				**ft_split_charset(char *str, char *charset);
 char				*ft_strcat(char *dst, const char *src);
 char				*ft_strchr(const char *s, int c);
+char				*ft_strchrs(const char *s, const char *cs);
 void				ft_strclr(char *s);
 char				*ft_strchar(int c, int size);
 int					ft_strcmp(const char *s1, const char *s2);
