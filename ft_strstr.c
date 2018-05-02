@@ -6,7 +6,7 @@
 /*   By: abezanni <abezanni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/06 17:23:30 by abezanni          #+#    #+#             */
-/*   Updated: 2017/11/08 22:08:22 by abezanni         ###   ########.fr       */
+/*   Updated: 2018/05/02 17:54:48 by abezanni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,5 +32,5 @@ char	*ft_strstr(const char *str, const char *to_find)
 			}
 		i++;
 	}
-	return (0);
+	return (NULL);
 }

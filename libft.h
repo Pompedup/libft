@@ -6,7 +6,7 @@
 /*   By: abezanni <abezanni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/06 17:43:03 by abezanni          #+#    #+#             */
-/*   Updated: 2018/04/21 15:31:17 by abezanni         ###   ########.fr       */
+/*   Updated: 2018/05/02 12:01:47 by abezanni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -64,6 +64,7 @@ void				*ft_memjoin(void *s1, void *s2, size_t s_s1, size_t s_s2);
 void				*ft_memmove(void *dst, const void *src, size_t len);
 void				*ft_memset(void *b, int c, size_t len);
 int					ft_nbr_len(int n);
+int					ft_nbr_words_charset(char *str, char *charset);
 void				ft_putchar_fd(char c, int fd);
 void				ft_putchar(int c);
 void				ft_putendl_fd(char const *s, int fd);

@@ -6,7 +6,7 @@
 #    By: abezanni <abezanni@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/11/09 17:32:49 by abezanni          #+#    #+#              #
-#    Updated: 2018/04/21 15:31:31 by abezanni         ###   ########.fr        #
+#    Updated: 2018/05/02 19:16:23 by abezanni         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -41,6 +41,7 @@ SRC =	ft_atoi.c\
 		ft_memmove.c\
 		ft_memset.c\
 		ft_nbr_len.c\
+		ft_nbr_words_charset.c\
 		ft_putchar_fd.c\
 		ft_putchar.c\
 		ft_putendl_fd.c\
@@ -92,7 +93,7 @@ OBJ = $(SRC:.c=.o)
 
 CFLAGS = -Wall -Werror -Wextra
 
-CC = @gcc
+CC = gcc
 
 NAME = libft.a
 

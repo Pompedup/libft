@@ -1,39 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_split_charset.c                                 :+:      :+:    :+:   */
+/*   ft_nbr_words_charset.c                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: abezanni <abezanni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/04/18 15:15:24 by abezanni          #+#    #+#             */
-/*   Updated: 2018/05/02 12:00:51 by abezanni         ###   ########.fr       */
+/*   Created: 2018/05/02 11:59:08 by abezanni          #+#    #+#             */
+/*   Updated: 2018/05/02 19:17:13 by abezanni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	**ft_split_charset(char *str, char *charset)
+int	ft_nbr_words_charset(char *str, char *charset)
 {
-	char	**back;
-	int		size_words;
-	int		i;
+	int back;
 
-	if (!(str && charset) || !(back = malloc(sizeof(char*) * ((ft_nbr_words_charset(str, charset) + 1)))))
-		return (NULL);
-	i = 0;
+	back = !ft_strchr(charset, *str) ? 1 : 0;
 	while (*str)
 	{
-		size_words = 0;
-		while (ft_strchr(charset, *str))
-			str++;
-		while (*str && !ft_strchr(charset, *str))
-		{
-			str++;
-			size_words++;
-		}
-		if (size_words)
-			back[i++] = ft_strndup(str - size_words, size_words);
+		if (ft_strchr(charset, *str) && !ft_strchr(charset, *(str + 1)) && *(str + 1))
+			back++;
+		str++;
 	}
-	back[i] = NULL;
 	return (back);
 }
