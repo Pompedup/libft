@@ -3,28 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_split_charset.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: abezanni <abezanni@student.42.fr>          +#+  +:+       +#+        */
+/*   By: adibou <adibou@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/04/18 15:15:24 by abezanni          #+#    #+#             */
-/*   Updated: 2018/04/21 15:18:35 by abezanni         ###   ########.fr       */
+/*   Updated: 2018/04/29 14:55:14 by adibou           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
-
-static	int ft_nb_words(char *str, char *charset)
-{
-	int back;
-
-	back = !ft_strchr(charset, *str) ? 1 : 0;
-	while (*str)
-	{
-		if (ft_strchr(charset, *str) && !ft_strchr(charset, *(str + 1)) && *(str + 1))
-			back++;
-		str++;
-	}
-	return (back);
-}
+#include "libft.h"	
 
 char	**ft_split_charset(char *str, char *charset)
 {
@@ -32,7 +18,7 @@ char	**ft_split_charset(char *str, char *charset)
 	int		size_words;
 	int		i;
 
-	if (!(str && charset) || !(back = malloc(sizeof(char*) * ((ft_nb_words(str, charset) + 1)))))
+	if (!(str && charset) || !(back = malloc(sizeof(char*) * ((ft_nbr_words_charset(str, charset) + 1)))))
 		return (NULL);
 	i = 0;
 	while (*str)

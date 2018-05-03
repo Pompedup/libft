@@ -3,15 +3,16 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: abezanni <abezanni@student.42.fr>          +#+  +:+       +#+         #
+#    By: adibou <adibou@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/11/09 17:32:49 by abezanni          #+#    #+#              #
-#    Updated: 2018/04/21 15:31:31 by abezanni         ###   ########.fr        #
+#    Updated: 2018/04/30 13:19:25 by adibou           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 SRC =	ft_atoi.c\
 		ft_bzero.c\
+		ft_free_char_tab.c\
 		ft_isalnum.c\
 		ft_isalpha.c\
 		ft_isascii.c\
@@ -41,6 +42,7 @@ SRC =	ft_atoi.c\
 		ft_memmove.c\
 		ft_memset.c\
 		ft_nbr_len.c\
+		ft_nbr_words_charset.c\
 		ft_putchar_fd.c\
 		ft_putchar.c\
 		ft_putendl_fd.c\
