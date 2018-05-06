@@ -6,36 +6,39 @@
 /*   By: abezanni <abezanni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/09 00:10:52 by abezanni          #+#    #+#             */
-/*   Updated: 2017/11/17 15:34:57 by abezanni         ###   ########.fr       */
+/*   Updated: 2018/05/04 10:48:00 by abezanni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strtrim(const char *s)
+/*
+**	Enleve les espaces au debut et a la fin de la chaine str
+*/
+
+char	*ft_strtrim(const char *str)
 {
 	char	*back;
-	size_t	i;
 	size_t	end;
 	size_t	bgn;
 
 	bgn = 0;
-	if (!s)
+	back = NULL;
+	if (!str)
 		return (NULL);
-	while (s[bgn] == ' ' || s[bgn] == '\n' || s[bgn] == '\t')
+	while (str[bgn] == ' ' || str[bgn] == '\n' || str[bgn] == '\t')
 		bgn++;
-	end = ft_strlen(s);
-	while ((s[end] == ' ' || s[end] == '\n' ||
-	s[end] == '\t' || s[end] == '\0') && end)
+	end = ft_strlen(str);
+	while ((str[end] == ' ' || str[end] == '\n' ||
+	str[end] == '\t' || str[end] == '\0') && end)
 		end--;
-	if (s[bgn] == '\0')
+	if (str[bgn] == '\0')
 		return (ft_strdup(""));
 	else if (bgn <= end)
+	{
 		if (!(back = (char*)malloc(end - bgn + 2)))
 			return (NULL);
-	i = 0;
-	while (bgn <= end)
-		back[i++] = s[bgn++];
-	back[i] = 0;
+		ft_strncpy(back, str + bgn, end - bgn + 1);
+	}
 	return (back);
 }

@@ -1,25 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strncmp.c                                       :+:      :+:    :+:   */
+/*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: abezanni <abezanni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/11/08 16:06:56 by abezanni          #+#    #+#             */
-/*   Updated: 2018/05/04 10:39:08 by abezanni         ###   ########.fr       */
+/*   Created: 2018/05/04 10:12:17 by abezanni          #+#    #+#             */
+/*   Updated: 2018/05/04 10:27:32 by abezanni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <stdio.h>
 
-int	ft_strncmp(const char *s1, const char *s2, size_t len)
+int main(void)
 {
-	if (!len)
-		return (0);
-	while ((*s1 == *s2) && --len && *s1 && *s2)
-	{
-		s1++;
-		s2++;
-	}
-	return (((unsigned char)*s1 - (unsigned char)*s2));
+	char **back;
+	int i = 0;
+
+	back = ft_strsplit("arthur suce des bites", 'e');
+	while (back[i])
+		ft_putendl(back[i++]);
+	return (0);
 }

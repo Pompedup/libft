@@ -6,7 +6,7 @@
 /*   By: abezanni <abezanni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/09 10:08:48 by abezanni          #+#    #+#             */
-/*   Updated: 2018/01/10 22:22:46 by abezanni         ###   ########.fr       */
+/*   Updated: 2018/05/04 10:51:28 by abezanni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,7 +41,7 @@ char		*ft_itoa(int n)
 		return (ft_strdup("0"));
 	len = ft_nbr_len(n);
 	if (!(back = (char*)malloc(len + 1)))
-		return (0);
+		return (NULL);
 	back[len] = 0;
 	ft_rec_itoa(back, n, --len);
 	return (back);

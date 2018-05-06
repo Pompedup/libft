@@ -6,24 +6,25 @@
 /*   By: abezanni <abezanni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/08 23:50:52 by abezanni          #+#    #+#             */
-/*   Updated: 2017/11/12 17:48:21 by abezanni         ###   ########.fr       */
+/*   Updated: 2018/05/04 10:36:58 by abezanni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strsub(const char *s, unsigned int start, size_t len)
+/*
+**	Copie len caracteres de la chaine str depuis la position start
+*/
+
+char	*ft_strsub(const char *str, unsigned int start, size_t len)
 {
-	size_t	i;
 	char	*back;
 
-	i = -1;
-	if (!s)
+	if (!str)
 		return (NULL);
 	if (!(back = (char *)malloc(len + 1)))
 		return (NULL);
-	while (++i < len)
-		back[i] = s[start++];
-	back[i] = 0;
+	ft_strncpy(back, str + start, len);
+	back[len] = 0;
 	return (back);
 }

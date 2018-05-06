@@ -6,11 +6,15 @@
 /*   By: abezanni <abezanni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/07 20:52:28 by abezanni          #+#    #+#             */
-/*   Updated: 2017/11/08 22:07:31 by abezanni         ###   ########.fr       */
+/*   Updated: 2018/05/04 10:06:41 by abezanni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
+/*
+**	Cherche la chaine to_find dans les len premiers caracteres de str
+*/
 
 char	*ft_strnstr(const char *str, const char *to_find, size_t len)
 {
@@ -32,5 +36,5 @@ char	*ft_strnstr(const char *str, const char *to_find, size_t len)
 			}
 		i++;
 	}
-	return (0);
+	return (NULL);
 }

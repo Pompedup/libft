@@ -6,11 +6,15 @@
 /*   By: abezanni <abezanni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/06 17:23:30 by abezanni          #+#    #+#             */
-/*   Updated: 2018/05/02 17:54:48 by abezanni         ###   ########.fr       */
+/*   Updated: 2018/05/04 10:33:11 by abezanni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
+/*
+**	Cherche la chaine to_find dans la chaine str
+*/
 
 char	*ft_strstr(const char *str, const char *to_find)
 {

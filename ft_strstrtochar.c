@@ -1,25 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strncmp.c                                       :+:      :+:    :+:   */
+/*   ft_strtochar.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: abezanni <abezanni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/11/08 16:06:56 by abezanni          #+#    #+#             */
-/*   Updated: 2018/05/04 10:39:08 by abezanni         ###   ########.fr       */
+/*   Created: 2018/05/06 19:08:44 by abezanni          #+#    #+#             */
+/*   Updated: 2018/05/06 19:12:28 by abezanni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
-
-int	ft_strncmp(const char *s1, const char *s2, size_t len)
+int	ft_strstrtochar(char *str, char *to_find, char c)
 {
-	if (!len)
-		return (0);
-	while ((*s1 == *s2) && --len && *s1 && *s2)
-	{
-		s1++;
-		s2++;
-	}
-	return (((unsigned char)*s1 - (unsigned char)*s2));
+	int i;
+
+	i = 0;
+	while (to_find[i] == str[i] && to_find[i])
+		i++;
+	return (!to_find[i] && str[i] == c ? i : 0);
 }

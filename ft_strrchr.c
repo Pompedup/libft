@@ -6,23 +6,25 @@
 /*   By: abezanni <abezanni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/08 16:19:32 by abezanni          #+#    #+#             */
-/*   Updated: 2017/11/09 13:46:17 by abezanni         ###   ########.fr       */
+/*   Updated: 2018/05/04 10:09:46 by abezanni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strrchr(const char *s, int c)
+/*
+**	Cherche la derniere apparition du caractere c dans la chaine str
+*/
+
+char	*ft_strrchr(const char *str, int c)
 {
 	int i;
 
-	i = 0;
-	while (s[i])
-		i++;
+	i = ft_strlen(str);
 	while (i >= 0)
 	{
-		if (s[i] == c)
-			return ((char*)(s + i));
+		if (str[i] == c)
+			return ((char*)(str + i));
 		i--;
 	}
 	return (NULL);
