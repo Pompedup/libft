@@ -6,12 +6,13 @@
 #    By: abezanni <abezanni@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/11/09 17:32:49 by abezanni          #+#    #+#              #
-#    Updated: 2018/05/13 19:38:50 by abezanni         ###   ########.fr        #
+#    Updated: 2018/05/31 17:21:43 by abezanni         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 SRC =	ft_atoi.c\
 		ft_bzero.c\
+		ft_int_tab_cmp.c\
 		ft_isalnum.c\
 		ft_isalpha.c\
 		ft_isascii.c\
@@ -100,7 +101,7 @@ NAME = libft.a
 
 all : $(NAME)
 
-$(NAME) : $(OBJ)
+$(NAME) : $(OBJ) libft.h
 	@ar rc $(NAME) $(OBJ)
 	@echo "\033[1;32mSucced libft.a\033[0m"
 

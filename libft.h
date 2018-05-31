@@ -6,7 +6,7 @@
 /*   By: abezanni <abezanni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/06 17:43:03 by abezanni          #+#    #+#             */
-/*   Updated: 2018/05/06 19:13:00 by abezanni         ###   ########.fr       */
+/*   Updated: 2018/05/31 17:20:55 by abezanni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,7 @@ typedef struct		s_list{
 
 int					ft_atoi(const char *str);
 void				ft_bzero(void *s, size_t n);
-char				*ft_int_to_str(int nbr);
+int					ft_int_tab_cmp(int *tab1, int *tab2, int size1, int size2);
 int					ft_isalnum(int c);
 int					ft_isalpha(int c);
 int					ft_isascii(int c);
