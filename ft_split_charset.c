@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_split_charset.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: abezanni <abezanni@student.42.fr>          +#+  +:+       +#+        */
+/*   By: ccoupez <ccoupez@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/04/18 15:15:24 by abezanni          #+#    #+#             */
-/*   Updated: 2018/05/02 12:00:51 by abezanni         ###   ########.fr       */
+/*   Updated: 2018/06/06 14:07:45 by ccoupez          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,8 @@ char	**ft_split_charset(char *str, char *charset)
 	int		size_words;
 	int		i;
 
-	if (!(str && charset) || !(back = malloc(sizeof(char*) * ((ft_nbr_words_charset(str, charset) + 1)))))
+	if (!(str && charset) || !(back = malloc(sizeof(char*) *
+		((ft_nbr_words_charset(str, charset) + 1)))))
 		return (NULL);
 	i = 0;
 	while (*str)
