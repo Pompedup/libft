@@ -1,27 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstnew.c                                        :+:      :+:    :+:   */
+/*   ft_listdelone.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: abezanni <abezanni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/06/08 15:10:14 by abezanni          #+#    #+#             */
-/*   Updated: 2018/06/08 15:13:16 by abezanni         ###   ########.fr       */
+/*   Created: 2017/11/09 13:27:14 by abezanni          #+#    #+#             */
+/*   Updated: 2018/06/08 15:06:20 by abezanni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-t_lst	*ft_lstnew(void *first, void *second, void *third, int nb)
+void	ft_listdelone(t_list **alst, void (*del)(void *, size_t))
 {
-	t_lst *back;
-
-	if (!(back = malloc(sizeof(t_lst))))
-		return (NULL);
-	back->first = first;
-	back->second = second;
-	back->third = third;
-	back->nb = nb;
-	back->next = NULL;
-	return (back);
+	del((*alst)->content, (*alst)->content_size);
+	free(*alst);
+	*alst = NULL;
 }

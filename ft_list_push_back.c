@@ -1,27 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstnew.c                                        :+:      :+:    :+:   */
+/*   ft_list_push_back.c                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: abezanni <abezanni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/06/08 15:10:14 by abezanni          #+#    #+#             */
-/*   Updated: 2018/06/08 15:13:16 by abezanni         ###   ########.fr       */
+/*   Created: 2017/11/24 19:11:29 by glebouch          #+#    #+#             */
+/*   Updated: 2018/06/08 15:21:57 by abezanni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-t_lst	*ft_lstnew(void *first, void *second, void *third, int nb)
+void	ft_list_push_back(t_list **begin_list, t_list *new)
 {
-	t_lst *back;
+	t_list *tmp;
 
-	if (!(back = malloc(sizeof(t_lst))))
-		return (NULL);
-	back->first = first;
-	back->second = second;
-	back->third = third;
-	back->nb = nb;
-	back->next = NULL;
-	return (back);
+	if (*begin_list != NULL)
+	{
+		tmp = *begin_list;
+		while (tmp->next)
+			tmp = tmp->next;
+		tmp->next = new;
+	}
+	else
+	{
+		*begin_list = new;
+		(*begin_list)->next = NULL;
+	}
 }

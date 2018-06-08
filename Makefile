@@ -6,17 +6,19 @@
 #    By: abezanni <abezanni@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/11/09 17:32:49 by abezanni          #+#    #+#              #
-#    Updated: 2018/05/31 17:21:43 by abezanni         ###   ########.fr        #
+#    Updated: 2018/06/08 15:18:29 by abezanni         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 SRC =	ft_atoi.c\
 		ft_bzero.c\
+		ft_getnbr.c\
 		ft_int_tab_cmp.c\
 		ft_isalnum.c\
 		ft_isalpha.c\
 		ft_isascii.c\
 		ft_isdigit.c\
+		ft_isint.c\
 		ft_islower.c\
 		ft_isprint.c\
 		ft_isspace.c\
@@ -24,14 +26,17 @@ SRC =	ft_atoi.c\
 		ft_iterative_power.c\
 		ft_itoa.c\
 		ft_lltoa_base.c\
-		ft_lst_push_back.c\
-		ft_lstadd.c\
-		ft_lstdel.c\
+		ft_list_push_back.c\
+		ft_listadd.c\
+		ft_listdel.c\
+		ft_listdelone.c\
+		ft_listremoveone.c\
+		ft_listiter.c\
+		ft_listmap.c\
+		ft_listnew.c\
 		ft_lstdelone.c\
-		ft_lstremoveone.c\
-		ft_lstiter.c\
-		ft_lstmap.c\
 		ft_lstnew.c\
+		ft_lstpushback.c\
 		ft_memalloc.c\
 		ft_memccpy.c\
 		ft_memchr.c\

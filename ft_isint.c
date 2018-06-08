@@ -1,27 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstnew.c                                        :+:      :+:    :+:   */
+/*   ft_isint.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: abezanni <abezanni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/06/08 15:10:14 by abezanni          #+#    #+#             */
-/*   Updated: 2018/06/08 15:13:16 by abezanni         ###   ########.fr       */
+/*   Created: 2018/06/08 14:58:08 by abezanni          #+#    #+#             */
+/*   Updated: 2018/06/08 14:58:17 by abezanni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-t_lst	*ft_lstnew(void *first, void *second, void *third, int nb)
+int	ft_isint(char *str)
 {
-	t_lst *back;
+	int		len;
 
-	if (!(back = malloc(sizeof(t_lst))))
-		return (NULL);
-	back->first = first;
-	back->second = second;
-	back->third = third;
-	back->nb = nb;
-	back->next = NULL;
-	return (back);
+	len = ft_strlen(str);
+	if ((*str != '+' && *str != '-' && len > 10) || len > 11 || len == 0)
+		return (0);
+	if (len > 9 && ft_strcmp(*str == '+' || *str == '-' ? str + 1 : str,
+		*str == '-' ? "2147483648" : "2147483647") > 0)
+		return (0);
+	if (((*str == '+' || *str == '-') && !*(str + 1)) ||
+		!ft_strisall(*str == '+' || *str == '-' ? str + 1 : str, ISDIGIT))
+		return (0);
+	return (1);
 }

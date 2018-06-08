@@ -6,7 +6,7 @@
 /*   By: abezanni <abezanni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/29 12:47:14 by abezanni          #+#    #+#             */
-/*   Updated: 2018/02/25 15:02:11 by abezanni         ###   ########.fr       */
+/*   Updated: 2018/06/08 15:08:31 by abezanni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ t_list	*ft_find_fd(t_list **lst, size_t fd)
 
 	if (*lst == NULL)
 	{
-		*lst = ft_lstnew(NULL, 0);
+		*lst = ft_listnew(NULL, 0);
 		(*lst)->content_size = fd;
 		return (*lst);
 	}
@@ -29,7 +29,7 @@ t_list	*ft_find_fd(t_list **lst, size_t fd)
 			tmp = tmp->next;
 		if (tmp->content_size != fd)
 		{
-			tmp->next = ft_lstnew(NULL, 0);
+			tmp->next = ft_listnew(NULL, 0);
 			tmp = tmp->next;
 			tmp->content_size = fd;
 		}
@@ -106,7 +106,7 @@ int		get_next_line(const int fd, char **line)
 		return (ft_full_line(tmp, line, 1));
 	if ((ret = ft_read(tmp, line)) == 0)
 	{
-		ft_lstremove(&lst, fd);
+		ft_listremove(&lst, fd);
 		return (0);
 	}
 	return (ret);

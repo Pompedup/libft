@@ -6,7 +6,7 @@
 /*   By: abezanni <abezanni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/06 17:43:03 by abezanni          #+#    #+#             */
-/*   Updated: 2018/05/31 17:20:55 by abezanni         ###   ########.fr       */
+/*   Updated: 2018/06/08 16:07:57 by abezanni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,7 @@
 # include <string.h>
 # include <stdlib.h>
 # include <unistd.h>
+# include <fcntl.h>
 # include "get_next_line.h"
 
 # define ISDIGIT &ft_isdigit
@@ -26,19 +27,34 @@
 # define ISUPPER &ft_isupper
 # define ISPRINT &ft_isprint
 
+# define TRUE 1
+# define FALSE 0
+
+typedef char	t_bool;
+
 typedef struct		s_list{
 	void			*content;
 	size_t			content_size;
 	struct s_list	*next;
 }					t_list;
 
+typedef struct		s_lst{
+	void			*first;
+	void			*second;
+	void			*third;
+	int				nb;
+	struct s_lst	*next;
+}					t_lst;
+
 int					ft_atoi(const char *str);
 void				ft_bzero(void *s, size_t n);
+t_bool				ft_getnbr(char *str, int *value);
 int					ft_int_tab_cmp(int *tab1, int *tab2, int size1, int size2);
 int					ft_isalnum(int c);
 int					ft_isalpha(int c);
 int					ft_isascii(int c);
 int					ft_isdigit(int c);
+int					ft_isint(char *str);
 int					ft_islower(int c);
 int					ft_isprint(int c);
 int					ft_isspace(int c);
@@ -46,14 +62,17 @@ int					ft_isupper(int c);
 int					ft_iterative_power(int nb, int power);
 char				*ft_itoa(int n);
 char				*ft_lltoa_base(long long value, int base, int maj);
-void				ft_lst_push_back(t_list **back, t_list *new);
-void				ft_lstadd(t_list **alst, t_list *new);
-void				ft_lstdel(t_list **alst, void (*del)(void *, size_t));
-void				ft_lstdelone(t_list **alst, void (*del)(void *, size_t));
-void				ft_lstiter(t_list *lst, void (*f)(t_list *elem));
-t_list				*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem));
-t_list				*ft_lstnew(void const *content, size_t content_size);
-void				ft_lstremove(t_list **alst, size_t content_size);
+void				ft_list_push_back(t_list **back, t_list *new);
+void				ft_listadd(t_list **alst, t_list *new);
+void				ft_listdel(t_list **alst, void (*del)(void *, size_t));
+void				ft_listdelone(t_list **alst, void (*del)(void *, size_t));
+void				ft_listiter(t_list *lst, void (*f)(t_list *elem));
+t_list				*ft_listmap(t_list *lst, t_list *(*f)(t_list *elem));
+t_list				*ft_listnew(void const *content, size_t content_size);
+void				ft_listremove(t_list **alst, size_t content_size);
+void				ft_lstdelone(t_lst *lst, int to_free);
+t_lst				*ft_lstnew(void *first, void *second, void *third, int nb);
+void				ft_lstpushback(t_lst **begin_list, t_lst *new);
 void				*ft_memalloc(size_t size);
 void				*ft_memccpy(void *dst, const void *src, int c, size_t n);
 void				*ft_memchr(const void *s, int c, size_t n);
