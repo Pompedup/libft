@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: abezanni <abezanni@student.42.fr>          +#+  +:+       +#+        */
+/*   By: adibou <adibou@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/06 17:43:03 by abezanni          #+#    #+#             */
-/*   Updated: 2018/05/31 17:20:55 by abezanni         ###   ########.fr       */
+/*   Updated: 2018/06/18 22:18:59 by adibou           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,20 +18,13 @@
 # include <unistd.h>
 # include "get_next_line.h"
 
-# define ISDIGIT &ft_isdigit
-# define ISALPHA &ft_isalpha
-# define ISASCII &ft_isascii
-# define ISALNUM &ft_isalnum
-# define ISLOWER &ft_islower
-# define ISUPPER &ft_isupper
-# define ISPRINT &ft_isprint
-
 typedef struct		s_list{
 	void			*content;
 	size_t			content_size;
 	struct s_list	*next;
 }					t_list;
 
+int					ft_abs(int value);
 int					ft_atoi(const char *str);
 void				ft_bzero(void *s, size_t n);
 int					ft_int_tab_cmp(int *tab1, int *tab2, int size1, int size2);

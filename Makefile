@@ -3,14 +3,15 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: abezanni <abezanni@student.42.fr>          +#+  +:+       +#+         #
+#    By: adibou <adibou@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/11/09 17:32:49 by abezanni          #+#    #+#              #
-#    Updated: 2018/05/31 17:21:43 by abezanni         ###   ########.fr        #
+#    Updated: 2018/06/18 21:30:49 by adibou           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-SRC =	ft_atoi.c\
+SRC =	ft_abs.c\
+		ft_atoi.c\
 		ft_bzero.c\
 		ft_int_tab_cmp.c\
 		ft_isalnum.c\
