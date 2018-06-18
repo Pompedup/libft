@@ -6,7 +6,7 @@
 /*   By: abezanni <abezanni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/06 17:43:03 by abezanni          #+#    #+#             */
-/*   Updated: 2018/06/08 16:07:57 by abezanni         ###   ########.fr       */
+/*   Updated: 2018/06/18 20:14:06 by abezanni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,6 +46,7 @@ typedef struct		s_lst{
 	struct s_lst	*next;
 }					t_lst;
 
+int					ft_abs(int value);
 int					ft_atoi(const char *str);
 void				ft_bzero(void *s, size_t n);
 t_bool				ft_getnbr(char *str, int *value);

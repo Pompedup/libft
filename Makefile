@@ -6,11 +6,12 @@
 #    By: abezanni <abezanni@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/11/09 17:32:49 by abezanni          #+#    #+#              #
-#    Updated: 2018/06/08 15:18:29 by abezanni         ###   ########.fr        #
+#    Updated: 2018/06/18 20:13:45 by abezanni         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-SRC =	ft_atoi.c\
+SRC =	ft_abs.c\
+		ft_atoi.c\
 		ft_bzero.c\
 		ft_getnbr.c\
 		ft_int_tab_cmp.c\
