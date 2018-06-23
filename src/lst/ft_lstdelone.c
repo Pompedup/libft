@@ -1,31 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lst_push_back.c                                 :+:      :+:    :+:   */
+/*   ft_lstdelone.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: abezanni <abezanni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/11/24 19:11:29 by glebouch          #+#    #+#             */
-/*   Updated: 2017/11/28 14:43:30 by abezanni         ###   ########.fr       */
+/*   Created: 2018/06/08 15:13:43 by abezanni          #+#    #+#             */
+/*   Updated: 2018/06/23 17:01:30 by abezanni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_lst_push_back(t_list **begin_list, t_list *new)
+void	ft_lstdelone(t_lst *lst, size_t to_free)
 {
-	t_list *tmp;
-
-	if (*begin_list != NULL)
-	{
-		tmp = *begin_list;
-		while (tmp->next)
-			tmp = tmp->next;
-		tmp->next = new;
-	}
-	else
-	{
-		*begin_list = new;
-		(*begin_list)->next = NULL;
-	}
+	if (!lst)
+		return ;
+	if (lst->first && to_free & 1)
+		free(lst->first);
+	if (lst->second && to_free & 2)
+		free(lst->second);
+	if (lst->third && to_free & 4)
+		free(lst->third);
+	free(lst);
 }

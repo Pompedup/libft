@@ -1,18 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_list_push_back.c                                :+:      :+:    :+:   */
+/*   ft_listpushback.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: abezanni <abezanni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/24 19:11:29 by glebouch          #+#    #+#             */
-/*   Updated: 2018/06/08 15:21:57 by abezanni         ###   ########.fr       */
+/*   Updated: 2018/06/23 16:51:57 by abezanni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_list_push_back(t_list **begin_list, t_list *new)
+void	ft_listpushback(t_list **begin_list, t_list *new)
 {
 	t_list *tmp;
 

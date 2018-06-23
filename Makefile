@@ -6,100 +6,124 @@
 #    By: abezanni <abezanni@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/11/09 17:32:49 by abezanni          #+#    #+#              #
-#    Updated: 2018/06/18 20:13:45 by abezanni         ###   ########.fr        #
+#    Updated: 2018/06/23 18:12:40 by abezanni         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-SRC =	ft_abs.c\
-		ft_atoi.c\
-		ft_bzero.c\
-		ft_getnbr.c\
-		ft_int_tab_cmp.c\
-		ft_isalnum.c\
-		ft_isalpha.c\
-		ft_isascii.c\
-		ft_isdigit.c\
-		ft_isint.c\
-		ft_islower.c\
-		ft_isprint.c\
-		ft_isspace.c\
-		ft_isupper.c\
-		ft_iterative_power.c\
-		ft_itoa.c\
-		ft_lltoa_base.c\
-		ft_list_push_back.c\
-		ft_listadd.c\
-		ft_listdel.c\
-		ft_listdelone.c\
-		ft_listremoveone.c\
-		ft_listiter.c\
-		ft_listmap.c\
-		ft_listnew.c\
-		ft_lstdelone.c\
-		ft_lstnew.c\
-		ft_lstpushback.c\
-		ft_memalloc.c\
-		ft_memccpy.c\
-		ft_memchr.c\
-		ft_memcmp.c\
-		ft_memcpy.c\
-		ft_memdel.c\
-		ft_memjoin.c\
-		ft_memmove.c\
-		ft_memset.c\
-		ft_nbr_len.c\
-		ft_nbr_words_charset.c\
-		ft_putchar_fd.c\
-		ft_putchar.c\
-		ft_putendl_fd.c\
-		ft_putendl.c\
-		ft_putnbr_fd.c\
-		ft_putnbr.c\
-		ft_putnbrendl.c\
-		ft_putstr_fd.c\
-		ft_putstr.c\
-		ft_split_charset.c\
-		ft_strcat.c\
-		ft_strchar.c\
-		ft_strchr.c\
-		ft_strchrs.c\
-		ft_strclr.c\
-		ft_strcmp.c\
-		ft_strcpy.c\
-		ft_strdel.c\
-		ft_strdup.c\
-		ft_strequ.c\
-		ft_strisall.c\
-		ft_striter.c\
-		ft_striteri.c\
-		ft_strjoin.c\
-		ft_strlcat.c\
-		ft_strlen.c\
-		ft_strmap.c\
-		ft_strmapi.c\
-		ft_strmjoin.c\
-		ft_strncat.c\
-		ft_strncmp.c\
-		ft_strncpy.c\
-		ft_strndup.c\
-		ft_strnequ.c\
-		ft_strnew.c\
-		ft_strnstr.c\
-		ft_strrchr.c\
-		ft_strsplit.c\
-		ft_strstr.c\
-		ft_strstrtochar.c\
-		ft_strsub.c\
-		ft_strtrim.c\
-		ft_tolower.c\
-		ft_toupper.c\
-		ft_uitoa_base.c\
-		ft_ulltoa_base.c\
-		get_next_line.c\
+CHAR =		ft_isalnum.c\
+			ft_isalpha.c\
+			ft_isascii.c\
+			ft_isdigit.c\
+			ft_isint.c\
+			ft_islower.c\
+			ft_isprint.c\
+			ft_isspace.c\
+			ft_isupper.c\
+			ft_tolower.c\
+			ft_toupper.c\
+
+FILE =		get_next_line.c\
+
+LIST =		ft_listadd.c\
+			ft_listdel.c\
+			ft_listdelone.c\
+			ft_listiter.c\
+			ft_listmap.c\
+			ft_listnew.c\
+			ft_listpushback.c\
+			ft_listremoveone.c\
+
+LST =		ft_lstadd.c\
+			ft_lstdelone.c\
+			ft_lstiter.c\
+			ft_lstnew.c\
+			ft_lstpushback.c\
+			ft_lstremoveone.c\
+
+MEMORY =	ft_bzero.c\
+			ft_memalloc.c\
+			ft_memccpy.c\
+			ft_memchr.c\
+			ft_memcmp.c\
+			ft_memcpy.c\
+			ft_memdel.c\
+			ft_memjoin.c\
+			ft_memmove.c\
+			ft_memset.c\
+
+NUM =		ft_abs.c\
+			ft_atoi.c\
+			ft_getnbr.c\
+			ft_int_tab_cmp.c\
+			ft_iterative_power.c\
+			ft_itoa.c\
+			ft_lltoa_base.c\
+			ft_nbr_len.c\
+			ft_uitoa_base.c\
+			ft_ulltoa_base.c\
+
+PRINT =		ft_putchar_fd.c\
+			ft_putchar.c\
+			ft_putendl_fd.c\
+			ft_putendl.c\
+			ft_putnbr_fd.c\
+			ft_putnbr.c\
+			ft_putnbrendl.c\
+			ft_putstr_fd.c\
+			ft_putstr.c\
+
+STR =		ft_nbr_words_charset.c\
+			ft_split_charset.c\
+			ft_strcat.c\
+			ft_strchar.c\
+			ft_strchr.c\
+			ft_strchrs.c\
+			ft_strclr.c\
+			ft_strcmp.c\
+			ft_strcpy.c\
+			ft_strdel.c\
+			ft_strdup.c\
+			ft_strequ.c\
+			ft_strisall.c\
+			ft_striter.c\
+			ft_striteri.c\
+			ft_strjoin.c\
+			ft_strlcat.c\
+			ft_strlen.c\
+			ft_strmap.c\
+			ft_strmapi.c\
+			ft_strmjoin.c\
+			ft_strncat.c\
+			ft_strncmp.c\
+			ft_strncpy.c\
+			ft_strndup.c\
+			ft_strnequ.c\
+			ft_strnew.c\
+			ft_strnstr.c\
+			ft_strrchr.c\
+			ft_strsplit.c\
+			ft_strstr.c\
+			ft_strstrtochar.c\
+			ft_strsub.c\
+			ft_strtrim.c\
+
+SRC_NAME =	$(addprefix char/,$(CHAR))\
+			$(addprefix file/,$(FILE))\
+			$(addprefix list/,$(LIST))\
+			$(addprefix lst/,$(LST))\
+			$(addprefix memory/,$(MEMORY))\
+			$(addprefix num/,$(NUM))\
+			$(addprefix print/,$(PRINT))\
+			$(addprefix str/,$(STR))\
+
+SRC =		$(addprefix src/,$(SRC_NAME))\
+
+
+INC = -I inc/
 
 OBJ = $(SRC:.c=.o)
 
-CFLAGS = -Wall -Werror -Wextra
+CFLAGS = -Wall -Werror -Wextra $(INC)
 
 CC = @gcc
 
@@ -107,7 +131,7 @@ NAME = libft.a
 
 all : $(NAME)
 
-$(NAME) : $(OBJ) libft.h
+$(NAME) : $(OBJ) inc/libft.h
 	@ar rc $(NAME) $(OBJ)
 	@echo "\033[1;32mSucced libft.a\033[0m"
 
