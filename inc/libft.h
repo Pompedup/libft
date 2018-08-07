@@ -6,7 +6,7 @@
 /*   By: abezanni <abezanni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/06 17:43:03 by abezanni          #+#    #+#             */
-/*   Updated: 2018/06/23 17:01:54 by abezanni         ###   ########.fr       */
+/*   Updated: 2018/08/07 19:23:53 by abezanni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,14 +18,6 @@
 # include <unistd.h>
 # include <fcntl.h>
 # include "get_next_line.h"
-
-# define ISDIGIT &ft_isdigit
-# define ISALPHA &ft_isalpha
-# define ISASCII &ft_isascii
-# define ISALNUM &ft_isalnum
-# define ISLOWER &ft_islower
-# define ISUPPER &ft_isupper
-# define ISPRINT &ft_isprint
 
 # define TRUE 1
 # define FALSE 0
