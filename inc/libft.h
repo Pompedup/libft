@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: abezanni <abezanni@student.42.fr>          +#+  +:+       +#+        */
+/*   By: adibou <adibou@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/06 17:43:03 by abezanni          #+#    #+#             */
-/*   Updated: 2018/08/07 19:23:53 by abezanni         ###   ########.fr       */
+/*   Updated: 2018/08/08 12:16:31 by adibou           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,7 +55,7 @@ int					ft_isupper(int c);
 int					ft_iterative_power(int nb, int power);
 char				*ft_itoa(int n);
 char				*ft_lltoa_base(long long value, int base, int maj);
-void				ft_list_push_back(t_list **back, t_list *new);
+void				ft_listpushback(t_list **back, t_list *new);
 void				ft_listadd(t_list **alst, t_list *new);
 void				ft_listdel(t_list **alst, void (*del)(void *, size_t));
 void				ft_listdelone(t_list **alst, void (*del)(void *, size_t));

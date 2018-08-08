@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_isint.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: abezanni <abezanni@student.42.fr>          +#+  +:+       +#+        */
+/*   By: adibou <adibou@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/06/08 14:58:08 by abezanni          #+#    #+#             */
-/*   Updated: 2018/06/08 14:58:17 by abezanni         ###   ########.fr       */
+/*   Updated: 2018/08/08 12:13:58 by adibou           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ int	ft_isint(char *str)
 		*str == '-' ? "2147483648" : "2147483647") > 0)
 		return (0);
 	if (((*str == '+' || *str == '-') && !*(str + 1)) ||
-		!ft_strisall(*str == '+' || *str == '-' ? str + 1 : str, ISDIGIT))
+		!ft_strisall(*str == '+' || *str == '-' ? str + 1 : str, ft_isdigit))
 		return (0);
 	return (1);
 }
