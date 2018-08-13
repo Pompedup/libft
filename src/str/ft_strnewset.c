@@ -1,25 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strchar.c                                       :+:      :+:    :+:   */
+/*   ft_strnewset.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: abezanni <abezanni@student.42.fr>          +#+  +:+       +#+        */
+/*   By: adibou <adibou@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/01/14 14:49:33 by abezanni          #+#    #+#             */
-/*   Updated: 2018/01/14 14:53:43 by abezanni         ###   ########.fr       */
+/*   Created: 2018/08/09 15:03:23 by adibou            #+#    #+#             */
+/*   Updated: 2018/08/09 15:09:21 by adibou           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strchar(int c, int size)
+char	*ft_strnewset(char c, size_t size)
 {
+	
 	char *back;
 
-	if (!(back = (char*)malloc(size + 1)))
+	if (!size || !(back = (char*)malloc(size + 1)))
 		return (NULL);
 	back[size] = 0;
-	while (size)
-		back[--size] = c;
-	return (back);
+	return (ft_memset(back, c, size));
 }

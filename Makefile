@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: abezanni <abezanni@student.42.fr>          +#+  +:+       +#+         #
+#    By: adibou <adibou@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/11/09 17:32:49 by abezanni          #+#    #+#              #
-#    Updated: 2018/06/23 18:12:40 by abezanni         ###   ########.fr        #
+#    Updated: 2018/08/10 11:29:16 by adibou           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -75,7 +75,6 @@ PRINT =		ft_putchar_fd.c\
 STR =		ft_nbr_words_charset.c\
 			ft_split_charset.c\
 			ft_strcat.c\
-			ft_strchar.c\
 			ft_strchr.c\
 			ft_strchrs.c\
 			ft_strclr.c\
@@ -99,6 +98,7 @@ STR =		ft_nbr_words_charset.c\
 			ft_strndup.c\
 			ft_strnequ.c\
 			ft_strnew.c\
+			ft_strnewset.c\
 			ft_strnstr.c\
 			ft_strrchr.c\
 			ft_strsplit.c\

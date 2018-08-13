@@ -6,7 +6,7 @@
 /*   By: adibou <adibou@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/06 17:43:03 by abezanni          #+#    #+#             */
-/*   Updated: 2018/08/08 12:16:31 by adibou           ###   ########.fr       */
+/*   Updated: 2018/08/10 11:29:00 by adibou           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -91,7 +91,6 @@ char				*ft_strcat(char *dst, const char *src);
 char				*ft_strchr(const char *s, int c);
 char				*ft_strchrs(const char *s, const char *cs);
 void				ft_strclr(char *s);
-char				*ft_strchar(int c, int size);
 int					ft_strcmp(const char *s1, const char *s2);
 char				*ft_strcpy(char *dst, const char *src);
 void				ft_strdel(char **as);
@@ -112,6 +111,7 @@ char				*ft_strncpy(char *dst, const char *src, size_t len);
 char				*ft_strndup(const char *src, size_t n);
 int					ft_strnequ(char const *s1, char const *s2, size_t n);
 char				*ft_strnew(size_t size);
+char				*ft_strnewset(char c, size_t size);
 char				*ft_strnstr
 					(const char *haystack, const char *needle, size_t len);
 char				*ft_strrchr(const char *s, int c);
