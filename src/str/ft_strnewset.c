@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strnewset.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: adibou <adibou@student.42.fr>              +#+  +:+       +#+        */
+/*   By: abezanni <abezanni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/08/09 15:03:23 by adibou            #+#    #+#             */
-/*   Updated: 2018/08/09 15:09:21 by adibou           ###   ########.fr       */
+/*   Updated: 2018/08/15 15:42:00 by abezanni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,6 @@
 
 char	*ft_strnewset(char c, size_t size)
 {
-	
 	char *back;
 
 	if (!size || !(back = (char*)malloc(size + 1)))
