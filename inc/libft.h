@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: adibou <adibou@student.42.fr>              +#+  +:+       +#+        */
+/*   By: abezanni <abezanni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/06 17:43:03 by abezanni          #+#    #+#             */
-/*   Updated: 2018/08/10 11:29:00 by adibou           ###   ########.fr       */
+/*   Updated: 2018/08/17 16:35:49 by abezanni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,8 @@
 
 # define TRUE 1
 # define FALSE 0
+# define HEXAMIN "0123456789abcdef"
+# define HEXAMAX "0123456789ABCDEF"
 
 typedef char	t_bool;
 
@@ -123,6 +125,7 @@ char				*ft_strtrim(char const *s);
 int					ft_tolower(int c);
 int					ft_toupper(int c);
 char				*ft_uitoa_base(unsigned int value, int base, int maj);
-char				*ft_ulltoa_base(unsigned long long val, int base, int maj);
+int					ft_ulltoa_base(char *str, unsigned long long value,
+					int base, int maj);
 
 #endif

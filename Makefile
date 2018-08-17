@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: adibou <adibou@student.42.fr>              +#+  +:+       +#+         #
+#    By: abezanni <abezanni@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/11/09 17:32:49 by abezanni          #+#    #+#              #
-#    Updated: 2018/08/10 11:29:16 by adibou           ###   ########.fr        #
+#    Updated: 2018/08/16 13:38:03 by abezanni         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -118,22 +118,23 @@ SRC_NAME =	$(addprefix char/,$(CHAR))\
 
 SRC =		$(addprefix src/,$(SRC_NAME))\
 
+OBJ = $(SRC:.c=.o)
 
 INC = -I inc/
 
-OBJ = $(SRC:.c=.o)
-
-CFLAGS = -Wall -Werror -Wextra $(INC)
+NAME = libft.a
 
 CC = @gcc
 
-NAME = libft.a
+CFLAGS = -Wall -Werror -Wextra $(INC)
 
 all : $(NAME)
 
-$(NAME) : $(OBJ) inc/libft.h
+$(NAME) : $(OBJ)
 	@ar rc $(NAME) $(OBJ)
 	@echo "\033[1;32mSucced libft.a\033[0m"
+
+$(OBJ) : inc/libft.h inc/get_next_line.h
 
 clean :
 	@/bin/rm -f $(OBJ)

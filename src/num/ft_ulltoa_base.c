@@ -6,7 +6,7 @@
 /*   By: abezanni <abezanni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/02/26 17:47:36 by abezanni          #+#    #+#             */
-/*   Updated: 2018/02/26 17:48:32 by abezanni         ###   ########.fr       */
+/*   Updated: 2018/08/17 16:35:08 by abezanni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,12 +23,10 @@ static void	ft_ulltoa_insert(char *back, int base,
 	*(back--) = 0;
 	while (val)
 	{
-		if (val % base > 9 && !maj)
-			*(back--) = val % base + 87;
-		else if (val % base > 9 && maj)
-			*(back--) = val % base + 55;
+		if (maj)
+			*(back--) = HEXAMAX[val % base];
 		else
-			*(back--) = val % base + 48;
+			*(back--) = HEXAMIN[val % base];
 		val /= base;
 	}
 }
@@ -39,26 +37,27 @@ static void	ft_ulltoa_insert(char *back, int base,
 ** si hexadecimal majuscule
 */
 
-char		*ft_ulltoa_base(unsigned long long value, int base, int maj)
+int			ft_ulltoa_base(char *str, unsigned long long value,
+				int base, int maj)
 {
-	char				*back;
 	int					i;
 	unsigned long long	save;
 
 	if (base < 2 || base > 16)
-		return (NULL);
+		return (-1);
 	if (value == 0)
-		return (ft_strdup("0"));
-	i = 0;
-	save = value;
-	while (save)
+		ft_strcpy(str, "0");
+	else
 	{
-		save /= base;
-		i++;
+		i = 0;
+		save = value;
+		while (save)
+		{
+			save /= base;
+			i++;
+		}
+		str[0] = '-';
+		ft_ulltoa_insert(str + i, base, value, maj);
 	}
-	if (!(back = (char *)malloc(i + 1)))
-		return (0);
-	back[0] = '-';
-	ft_ulltoa_insert(back + i, base, value, maj);
-	return (back);
+	return (ft_strlen(str));
 }
