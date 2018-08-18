@@ -6,7 +6,7 @@
 /*   By: abezanni <abezanni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/06 17:43:03 by abezanni          #+#    #+#             */
-/*   Updated: 2018/08/17 16:35:49 by abezanni         ###   ########.fr       */
+/*   Updated: 2018/08/18 15:31:48 by abezanni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,7 +56,7 @@ int					ft_isspace(int c);
 int					ft_isupper(int c);
 int					ft_iterative_power(int nb, int power);
 char				*ft_itoa(int n);
-char				*ft_lltoa_base(long long value, int base, int maj);
+int					ft_lltoa_base(char *str, long long value, int base, int maj);
 void				ft_listpushback(t_list **back, t_list *new);
 void				ft_listadd(t_list **alst, t_list *new);
 void				ft_listdel(t_list **alst, void (*del)(void *, size_t));
