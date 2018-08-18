@@ -6,7 +6,7 @@
 /*   By: abezanni <abezanni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/06 17:43:03 by abezanni          #+#    #+#             */
-/*   Updated: 2018/08/18 15:31:48 by abezanni         ###   ########.fr       */
+/*   Updated: 2018/08/18 17:01:44 by abezanni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -116,6 +116,7 @@ char				*ft_strnew(size_t size);
 char				*ft_strnewset(char c, size_t size);
 char				*ft_strnstr
 					(const char *haystack, const char *needle, size_t len);
+int					ft_strposchr(char *str, char c);
 char				*ft_strrchr(const char *s, int c);
 char				**ft_strsplit(char const *s, char c);
 char				*ft_strstr(const char *haystack, const char *needle);

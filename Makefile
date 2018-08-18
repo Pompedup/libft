@@ -6,7 +6,7 @@
 #    By: abezanni <abezanni@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/11/09 17:32:49 by abezanni          #+#    #+#              #
-#    Updated: 2018/08/16 13:38:03 by abezanni         ###   ########.fr        #
+#    Updated: 2018/08/18 17:02:15 by abezanni         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -100,6 +100,7 @@ STR =		ft_nbr_words_charset.c\
 			ft_strnew.c\
 			ft_strnewset.c\
 			ft_strnstr.c\
+			ft_strposchr.c\
 			ft_strrchr.c\
 			ft_strsplit.c\
 			ft_strstr.c\
