@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: adibou <adibou@student.42.fr>              +#+  +:+       +#+         #
+#    By: pompedup <pompedup@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/11/09 17:32:49 by abezanni          #+#    #+#              #
-#    Updated: 2018/08/10 11:29:16 by adibou           ###   ########.fr        #
+#    Updated: 2018/08/30 15:12:48 by pompedup         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -53,12 +53,14 @@ MEMORY =	ft_bzero.c\
 
 NUM =		ft_abs.c\
 			ft_atoi.c\
+			ft_biggest.c\
 			ft_getnbr.c\
 			ft_int_tab_cmp.c\
 			ft_iterative_power.c\
 			ft_itoa.c\
 			ft_lltoa_base.c\
 			ft_nbr_len.c\
+			ft_smallest.c\
 			ft_uitoa_base.c\
 			ft_ulltoa_base.c\
 

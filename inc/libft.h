@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: abezanni <abezanni@student.42.fr>          +#+  +:+       +#+        */
+/*   By: pompedup <pompedup@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/06 17:43:03 by abezanni          #+#    #+#             */
-/*   Updated: 2018/08/18 16:15:58 by abezanni         ###   ########.fr       */
+/*   Updated: 2018/08/30 15:12:16 by pompedup         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -119,12 +119,14 @@ void				*ft_memset(void *b, int c, size_t len);
 
 int					ft_abs(int value);
 int					ft_atoi(const char *str);
+int					ft_biggest(int a, int b);
 t_bool				ft_getnbr(char *str, int *value);
 int					ft_int_tab_cmp(int *tab1, int *tab2, int size1, int size2);
 int					ft_iterative_power(int nb, int power);
 char				*ft_itoa(int n);
 char				*ft_lltoa_base(long long value, int base, int maj);
 int					ft_nbr_len(int n);
+int					ft_smallest(int a, int b);
 char				*ft_uitoa_base(unsigned int value, int base, int maj);
 char				*ft_ulltoa_base(unsigned long long val, int base, int maj);
 
