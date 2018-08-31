@@ -6,40 +6,16 @@
 /*   By: ccoupez <ccoupez@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/06 17:43:03 by abezanni          #+#    #+#             */
-/*   Updated: 2018/08/31 16:00:42 by ccoupez          ###   ########.fr       */
+/*   Updated: 2018/08/31 16:20:56 by ccoupez          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
 
-# include <string.h>
-# include <stdlib.h>
-# include <unistd.h>
-# include <fcntl.h>
+# include "struct.h"
 # include "get_next_line.h"
-
-# define TRUE 1
-# define FALSE 0
-
-# define HEXAMIN "0123456789abcdef"
-# define HEXAMAX "0123456789ABCDEF"
-
-typedef char	t_bool;
-
-typedef struct		s_list{
-	void			*content;
-	size_t			content_size;
-	struct s_list	*next;
-}					t_list;
-
-typedef struct		s_lst{
-	void			*first;
-	void			*second;
-	void			*third;
-	int				nb;
-	struct s_lst	*next;
-}					t_lst;
+# include "ft_printf.h"
 
 /*
 ********************************************************************************

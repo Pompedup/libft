@@ -6,7 +6,7 @@
 #    By: ccoupez <ccoupez@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/11/09 17:32:49 by abezanni          #+#    #+#              #
-#    Updated: 2018/08/31 16:00:02 by ccoupez          ###   ########.fr        #
+#    Updated: 2018/08/31 16:24:42 by ccoupez          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -144,7 +144,7 @@ NAME = libft.a
 
 all : $(NAME)
 
-$(NAME) : $(OBJ) inc/libft.h inc/ft_printf.h inc/get_next_line.h
+$(NAME) : $(OBJ) inc/libft.h inc/ft_printf.h inc/get_next_line.h inc/struct.h
 	@ar rc $(NAME) $(OBJ)
 	@echo "\033[1;32mSucced libft.a\033[0m"
 

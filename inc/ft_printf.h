@@ -3,19 +3,20 @@
 /*                                                        :::      ::::::::   */
 /*   ft_printf.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: pompedup <pompedup@student.42.fr>          +#+  +:+       +#+        */
+/*   By: ccoupez <ccoupez@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/12/12 14:38:37 by abezanni          #+#    #+#             */
-/*   Updated: 2018/08/31 14:32:48 by pompedup         ###   ########.fr       */
+/*   Updated: 2018/08/31 16:20:20 by ccoupez          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef FT_PRINTF_H
 # define FT_PRINTF_H
 
-# include <stdarg.h>
 # include "libft.h"
 
+# define HEXAMIN	"0123456789abcdef"
+# define HEXAMAX	"0123456789ABCDEF"
 # define CONV		"sSpbdDioOuUxXcC%"
 # define FLAG		".+ -0#hhlljz"
 # define DOT		(1 << 0)
