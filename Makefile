@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: ccoupez <ccoupez@student.42.fr>            +#+  +:+       +#+         #
+#    By: pompedup <pompedup@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/11/09 17:32:49 by abezanni          #+#    #+#              #
-#    Updated: 2018/08/31 16:24:42 by ccoupez          ###   ########.fr        #
+#    Updated: 2018/08/31 22:58:46 by pompedup         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -57,6 +57,7 @@ MEMORY =	ft_bzero.c\
 			ft_memjoin.c\
 			ft_memmove.c\
 			ft_memset.c\
+			ft_print_memory.c\
 
 NUM =		ft_abs.c\
 			ft_atoi.c\

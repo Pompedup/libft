@@ -6,13 +6,13 @@
 /*   By: pompedup <pompedup@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/12/12 14:38:10 by abezanni          #+#    #+#             */
-/*   Updated: 2018/08/31 14:06:36 by pompedup         ###   ########.fr       */
+/*   Updated: 2018/08/31 22:56:16 by pompedup         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-void		ft_init(t_printf *dt, int fd, char *str, char option)
+static void	ft_init(t_printf *dt, int fd, char *str, char option)
 {
 	dt->format = str;
 	dt->buf_move = dt->buf;
@@ -66,9 +66,4 @@ int			ft_sprintf(char **str, char *format, ...)
 	else
 		*str = dt.str;
 	return (dt.tot + BUFF_PRF - dt.less);
-	//get_lst(&dt, &lst);
-	//concatenate(&dt, lst);
-	//*str = dt.str;
-//
-	//return (dt.tot);
 }
