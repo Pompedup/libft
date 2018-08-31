@@ -6,7 +6,7 @@
 #    By: pompedup <pompedup@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/11/09 17:32:49 by abezanni          #+#    #+#              #
-#    Updated: 2018/08/30 15:24:28 by pompedup         ###   ########.fr        #
+#    Updated: 2018/08/31 14:35:40 by pompedup         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -23,6 +23,13 @@ CHAR =		ft_isalnum.c\
 			ft_toupper.c\
 
 FILE =		get_next_line.c\
+
+FT_PRINTF =	apply_flags_numbers.c\
+			ft_printf.c\
+			get_flags.c\
+			get_numbers.c\
+			get_strings.c\
+			process_format.c\
 
 LIST =		ft_listadd.c\
 			ft_listdel.c\
@@ -113,6 +120,7 @@ STR =		ft_nbr_words_charset.c\
 
 SRC_NAME =	$(addprefix char/,$(CHAR))\
 			$(addprefix file/,$(FILE))\
+			$(addprefix ft_printf/,$(FT_PRINTF))\
 			$(addprefix list/,$(LIST))\
 			$(addprefix lst/,$(LST))\
 			$(addprefix memory/,$(MEMORY))\
@@ -135,7 +143,7 @@ NAME = libft.a
 
 all : $(NAME)
 
-$(NAME) : $(OBJ) inc/libft.h
+$(NAME) : $(OBJ) inc/libft.h inc/ft_printf.h inc/get_next_line.h
 	@ar rc $(NAME) $(OBJ)
 	@echo "\033[1;32mSucced libft.a\033[0m"
 
