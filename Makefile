@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: pompedup <pompedup@student.42.fr>          +#+  +:+       +#+         #
+#    By: ccoupez <ccoupez@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/11/09 17:32:49 by abezanni          #+#    #+#              #
-#    Updated: 2018/08/31 14:35:40 by pompedup         ###   ########.fr        #
+#    Updated: 2018/08/31 16:00:02 by ccoupez          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -111,6 +111,7 @@ STR =		ft_nbr_words_charset.c\
 			ft_strnstr.c\
 			ft_strposchr.c\
 			ft_strposchrs.c\
+			ft_strrev.c\
 			ft_strrchr.c\
 			ft_strsplit.c\
 			ft_strstr.c\
