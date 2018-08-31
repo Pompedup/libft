@@ -6,7 +6,7 @@
 #    By: pompedup <pompedup@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/11/09 17:32:49 by abezanni          #+#    #+#              #
-#    Updated: 2018/08/30 15:12:48 by pompedup         ###   ########.fr        #
+#    Updated: 2018/08/30 15:24:28 by pompedup         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -102,6 +102,8 @@ STR =		ft_nbr_words_charset.c\
 			ft_strnew.c\
 			ft_strnewset.c\
 			ft_strnstr.c\
+			ft_strposchr.c\
+			ft_strposchrs.c\
 			ft_strrchr.c\
 			ft_strsplit.c\
 			ft_strstr.c\

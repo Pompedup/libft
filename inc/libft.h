@@ -6,7 +6,7 @@
 /*   By: pompedup <pompedup@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/06 17:43:03 by abezanni          #+#    #+#             */
-/*   Updated: 2018/08/30 15:12:16 by pompedup         ###   ########.fr       */
+/*   Updated: 2018/08/30 15:26:26 by pompedup         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,9 @@
 
 # define TRUE 1
 # define FALSE 0
+
+# define HEXAMIN "0123456789abcdef"
+# define HEXAMAX "0123456789ABCDEF"
 
 typedef char	t_bool;
 
@@ -185,6 +188,8 @@ char				*ft_strnew(size_t size);
 char				*ft_strnewset(char c, size_t size);
 char				*ft_strnstr
 					(const char *haystack, const char *needle, size_t len);
+int					ft_strposchr(char *str, char c);
+int					ft_strposchrs(char *str, char *charset);
 char				*ft_strrchr(const char *s, int c);
 char				**ft_strsplit(char const *s, char c);
 char				*ft_strstr(const char *haystack, const char *needle);
