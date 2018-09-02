@@ -1,25 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strrev.c                                        :+:      :+:    :+:   */
+/*   ft_memrev.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: abezanni <abezanni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/07/19 17:52:25 by ccoupez           #+#    #+#             */
-/*   Updated: 2018/09/02 14:33:02 by abezanni         ###   ########.fr       */
+/*   Updated: 2018/09/02 14:34:05 by abezanni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_strrev(char *str)
+void	ft_memrev(void *src, int len)
 {
 	int		start;
-	int		len;
+	char	*str;
 	char	tmp;
 
 	start = 0;
-	len = (int)ft_strlen(str) - 1;
+	len -= 1;
+	str = (char *)src;
 	while (start < len)
 	{
 		tmp = str[start];

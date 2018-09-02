@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: pompedup <pompedup@student.42.fr>          +#+  +:+       +#+        */
+/*   By: abezanni <abezanni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/06 17:43:03 by abezanni          #+#    #+#             */
-/*   Updated: 2018/08/31 22:59:14 by pompedup         ###   ########.fr       */
+/*   Updated: 2018/09/02 14:33:25 by abezanni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -86,6 +86,7 @@ void				*ft_memcpy(void *dst, const void *src, size_t n);
 void				ft_memdel(void **ap);
 void				*ft_memjoin(void *s1, void *s2, size_t s_s1, size_t s_s2);
 void				*ft_memmove(void *dst, const void *src, size_t len);
+void				ft_memrev(void *src, int len);
 void				*ft_memset(void *b, int c, size_t len);
 void				ft_print_memory(const void *addr, size_t size);
 
@@ -167,7 +168,7 @@ char				*ft_strnstr
 					(const char *haystack, const char *needle, size_t len);
 int					ft_strposchr(char *str, char c);
 int					ft_strposchrs(char *str, char *charset);
-void				ft_strrev(char *str, int len);
+void				ft_strrev(char *str);
 char				*ft_strrchr(const char *s, int c);
 char				**ft_strsplit(char const *s, char c);
 char				*ft_strstr(const char *haystack, const char *needle);

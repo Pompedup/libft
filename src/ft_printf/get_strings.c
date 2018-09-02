@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   get_strings.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: pompedup <pompedup@student.42.fr>          +#+  +:+       +#+        */
+/*   By: abezanni <abezanni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/08/18 17:54:25 by abezanni          #+#    #+#             */
-/*   Updated: 2018/08/30 15:28:07 by pompedup         ###   ########.fr       */
+/*   Updated: 2018/09/02 15:00:56 by abezanni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-void	add_wchar(t_printf *dt, wchar_t c, int size)
+static void	add_wchar(t_printf *dt, wchar_t c, int size)
 {
 	if (size == 1)
 		dt->buf_move[0] = (char)c;
@@ -35,7 +35,7 @@ void	add_wchar(t_printf *dt, wchar_t c, int size)
 	}
 }
 
-int		wchar_t_len(wchar_t c)
+static int	wchar_t_len(wchar_t c)
 {
 	unsigned int	bin;
 	int				i;
@@ -50,7 +50,7 @@ int		wchar_t_len(wchar_t c)
 	return (i < 8 || i > 25 ? 1 : (i - 2) / 5 + 1);
 }
 
-void	type_c(t_printf *dt, t_flags *dt_flags, char type)
+void		type_c(t_printf *dt, t_flags *dt_flags, char type)
 {
 	wchar_t	c;
 	int		size;
@@ -62,16 +62,7 @@ void	type_c(t_printf *dt, t_flags *dt_flags, char type)
 	if (type == 'c' && !(dt_flags->flags & L))
 		c = (char)c;
 	size = wchar_t_len(c);
-	dt_flags->precision = 0;
-	if (dt_flags->flags & ZERO)
-	{
-		dt_flags->precision = dt_flags->space > size ? dt_flags->space - size : 0;
-		dt_flags->space = 0;
-	}
-	dt_flags->space = dt_flags->space > size ? dt_flags->space - size : 0;
-	if (!(dt_flags->flags & MINUS))
-		padding(dt, dt_flags, FALSE);
-	padding(dt, dt_flags, TRUE);
+	apply_flags_strings(dt, dt_flags, size);
 	add_wchar(dt, c, size);
 	dt->buf_move += size;
 	dt->less -= size;
@@ -79,7 +70,7 @@ void	type_c(t_printf *dt, t_flags *dt_flags, char type)
 		padding(dt, dt_flags, FALSE);
 }
 
-void	long_string(t_printf *dt, t_flags *dt_flags, wchar_t *str)
+static void	long_string(t_printf *dt, t_flags *dt_flags, wchar_t *str)
 {
 	int size;
 	int i;
@@ -91,16 +82,7 @@ void	long_string(t_printf *dt, t_flags *dt_flags, wchar_t *str)
 		size += wchar_t_len(str[i++]);
 	if (dt_flags->flags & DOT && size > dt_flags->precision)
 		size -= wchar_t_len(str[--i]);
-	dt_flags->precision = 0;
-	if (dt_flags->flags & ZERO)
-	{
-		dt_flags->precision = dt_flags->space > size ? dt_flags->space - size : 0;
-		dt_flags->space = 0;
-	}
-	dt_flags->space = dt_flags->space > size ? dt_flags->space - size : 0;
-	if (!(dt_flags->flags & MINUS))
-		padding(dt, dt_flags, FALSE);
-	padding(dt, dt_flags, TRUE);
+	apply_flags_strings(dt, dt_flags, size);
 	j = 0;
 	while (j < i)
 	{
@@ -113,10 +95,10 @@ void	long_string(t_printf *dt, t_flags *dt_flags, wchar_t *str)
 		padding(dt, dt_flags, FALSE);
 }
 
-void	type_s(t_printf *dt, t_flags *dt_flags, char type)
+void		type_s(t_printf *dt, t_flags *dt_flags, char type)
 {
 	wchar_t	*str;
-	int		len;
+	int		size;
 
 	str = va_arg(dt->ap, wchar_t*);
 	if ((type == 'S' || dt_flags->flags & L) && str)
@@ -124,21 +106,13 @@ void	type_s(t_printf *dt, t_flags *dt_flags, char type)
 	else
 	{
 		if (!str)
-			len = 6;
+			size = 6;
 		else
-			len = (int)ft_strlen((char*)str);
-		dt_flags->flags & DOT ? len = ft_smallest(len, dt_flags->precision) : 0;
-		dt_flags->precision = 0;
-		if (dt_flags->flags & ZERO)
-		{
-			dt_flags->precision = dt_flags->space > len ? dt_flags->space - len : 0;
-			dt_flags->space = 0;
-		}
-		dt_flags->space = dt_flags->space - len > 0 ? dt_flags->space - len : 0;
-		if (!(dt_flags->flags & MINUS))
-			padding(dt, dt_flags, FALSE);
-		padding(dt, dt_flags, TRUE);
-		rotative_buf(dt, str ? (char*)str : "(null)", len);
+			size = (int)ft_strlen((char*)str);
+		dt_flags->flags & DOT
+			? size = ft_smallest(size, dt_flags->precision) : 0;
+		apply_flags_strings(dt, dt_flags, size);
+		rotative_buf(dt, str ? (char*)str : "(null)", size);
 		if (dt_flags->flags & MINUS)
 			padding(dt, dt_flags, FALSE);
 	}

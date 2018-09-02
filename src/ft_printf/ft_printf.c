@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_printf.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: pompedup <pompedup@student.42.fr>          +#+  +:+       +#+        */
+/*   By: abezanni <abezanni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/12/12 14:38:10 by abezanni          #+#    #+#             */
-/*   Updated: 2018/08/31 22:56:16 by pompedup         ###   ########.fr       */
+/*   Updated: 2018/09/02 14:35:33 by abezanni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ static void	ft_init(t_printf *dt, int fd, char *str, char option)
 
 int			ft_printf(char *format, ...)
 {
-	static t_printf	dt;
+	static t_printf dt;
 
 	ft_init(&dt, 1, format, FT_PRINTF);
 	va_start(dt.ap, format);
@@ -34,8 +34,6 @@ int			ft_printf(char *format, ...)
 	write(1, dt.buf, BUFF_PRF - dt.less);
 	return (dt.tot + BUFF_PRF - dt.less);
 }
-
-
 
 int			ft_fprintf(int fd, char *format, ...)
 {

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   process_format.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: pompedup <pompedup@student.42.fr>          +#+  +:+       +#+        */
+/*   By: abezanni <abezanni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/08/16 13:49:32 by abezanni          #+#    #+#             */
-/*   Updated: 2018/08/31 14:04:11 by pompedup         ###   ########.fr       */
+/*   Updated: 2018/09/02 15:01:26 by abezanni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -73,6 +73,20 @@ void		rotative_buf(t_printf *dt, char *src, int to_cpy)
 	}
 }
 
+void		padding(t_printf *dt, t_flags *dt_flags, t_bool precision)
+{
+	char	c;
+	int		size;
+
+	size = precision ? dt_flags->precision : dt_flags->space;
+	if (!size)
+		return ;
+	c = precision ? '0' : ' ';
+	ft_memset(dt->buf_move, c, size);
+	dt->buf_move += size;
+	dt->less -= size;
+}
+
 void		process_format(t_printf *dt)
 {
 	int size;
@@ -88,22 +102,9 @@ void		process_format(t_printf *dt)
 		else
 		{
 			size = ft_strposchrs(dt->format, "%");
-			rotative_buf(dt, dt->format, size == -1 ? ft_strlen(dt->format) : size);
+			rotative_buf(dt, dt->format, size == -1
+				? ft_strlen(dt->format) : size);
 			dt->format += size == -1 ? ft_strlen(dt->format) : size;
 		}
 	}
-}
-
-void		padding(t_printf *dt, t_flags *dt_flags, t_bool precision)
-{
-	char	c;
-	int		size;
-
-	size = precision ? dt_flags->precision : dt_flags->space;
-	if (!size)
-		return ;
-	c = precision ? '0' : ' ';
-	ft_memset(dt->buf_move, c, size);
-	dt->buf_move += size;
-	dt->less -= size;
 }

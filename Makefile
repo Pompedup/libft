@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: pompedup <pompedup@student.42.fr>          +#+  +:+       +#+         #
+#    By: abezanni <abezanni@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/11/09 17:32:49 by abezanni          #+#    #+#              #
-#    Updated: 2018/08/31 22:58:46 by pompedup         ###   ########.fr        #
+#    Updated: 2018/09/02 14:59:52 by abezanni         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -24,7 +24,7 @@ CHAR =		ft_isalnum.c\
 
 FILE =		get_next_line.c\
 
-FT_PRINTF =	apply_flags_numbers.c\
+FT_PRINTF =	apply_flags.c\
 			ft_printf.c\
 			get_flags.c\
 			get_numbers.c\
@@ -56,6 +56,7 @@ MEMORY =	ft_bzero.c\
 			ft_memdel.c\
 			ft_memjoin.c\
 			ft_memmove.c\
+			ft_memrev.c\
 			ft_memset.c\
 			ft_print_memory.c\
 

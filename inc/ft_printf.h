@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_printf.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ccoupez <ccoupez@student.42.fr>            +#+  +:+       +#+        */
+/*   By: abezanni <abezanni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/12/12 14:38:37 by abezanni          #+#    #+#             */
-/*   Updated: 2018/08/31 16:20:20 by ccoupez          ###   ########.fr       */
+/*   Updated: 2018/09/02 14:59:31 by abezanni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,40 +52,48 @@ typedef struct	s_printf
 
 typedef struct	s_flags
 {
-	char			type;
-	char			c;
-	char			*hash;
-	int				len;
-	int				base;
-	int				flags;
-	int				space;
-	int				precision;
+	char		type;
+	char		c;
+	char		*hash;
+	int			len;
+	int			base;
+	int			flags;
+	int			space;
+	int			precision;
 
 }				t_flags;
 
 /*
-typedef struct	s_color
-{
-	char		*color;
-	char		*color_code;
-}				t_color;
+**typedef struct	s_color
+**{
+**	char		*color;
+**	char		*color_code;
+**}				t_color;
 */
-void	get_unsigned(t_printf *dt, t_flags *dt_flags, char type);
-void	get_signed(t_printf *dt, t_flags *dt_flags, char type);
-void	type_c(t_printf *dt, t_flags *dt_flags, char type);
-void	type_s(t_printf *dt, t_flags *dt_flags, char type);
 
 /*
 ********************************************************************************
 **                                                                            **
-**   process_format.c                                                         **
+**   apply_flags.c                                                            **
 **                                                                            **
 ********************************************************************************
 */
 
-void			process_format(t_printf *dt);
-void			rotative_buf(t_printf *dt, char *src, int to_cpy);
-void			padding(t_printf *dt, t_flags *dt_flags, t_bool precision);
+void			apply_flags(t_flags *dt_flags, t_bool neg,
+					t_bool signe, uintmax_t nbr);
+void			apply_flags_strings(t_printf *dt, t_flags *dt_flags, int size);
+
+/*
+********************************************************************************
+**                                                                            **
+**   ft_printf.c                                                              **
+**                                                                            **
+********************************************************************************
+*/
+
+int				ft_printf(char *str, ...);
+int				ft_fprintf(int fd, char *format, ...);
+int				ft_sprintf(char **str, char *format, ...);
 
 /*
 ********************************************************************************
@@ -100,16 +108,35 @@ char			*get_flags(char *format, t_flags *data);
 /*
 ********************************************************************************
 **                                                                            **
-**   ft_printf.c                                                              **
+**   get_numbers.c                                                            **
 **                                                                            **
 ********************************************************************************
 */
 
-int				ft_printf(char *str, ...);
-int				ft_fprintf(int fd, char *format, ...);
-//int				ft_sprintf(char **str, char *format, ...);
+void			get_unsigned(t_printf *dt, t_flags *dt_flags, char type);
+void			get_signed(t_printf *dt, t_flags *dt_flags, char type);
 
+/*
+********************************************************************************
+**                                                                            **
+**   get_strings.c                                                            **
+**                                                                            **
+********************************************************************************
+*/
 
-void	apply_flags(t_flags *dt_flags, t_bool neg, t_bool signe, uintmax_t nbr);
+void			type_c(t_printf *dt, t_flags *dt_flags, char type);
+void			type_s(t_printf *dt, t_flags *dt_flags, char type);
+
+/*
+********************************************************************************
+**                                                                            **
+**   process_format.c                                                         **
+**                                                                            **
+********************************************************************************
+*/
+
+void			process_format(t_printf *dt);
+void			rotative_buf(t_printf *dt, char *src, int to_cpy);
+void			padding(t_printf *dt, t_flags *dt_flags, t_bool precision);
 
 #endif
