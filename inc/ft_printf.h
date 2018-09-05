@@ -6,7 +6,7 @@
 /*   By: abezanni <abezanni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/12/12 14:38:37 by abezanni          #+#    #+#             */
-/*   Updated: 2018/09/02 14:59:31 by abezanni         ###   ########.fr       */
+/*   Updated: 2018/09/05 15:33:02 by abezanni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -79,7 +79,7 @@ typedef struct	s_flags
 ********************************************************************************
 */
 
-void			apply_flags(t_flags *dt_flags, t_bool neg,
+void			apply_flags_numbers(t_flags *dt_flags, t_bool neg,
 					t_bool signe, uintmax_t nbr);
 void			apply_flags_strings(t_printf *dt, t_flags *dt_flags, int size);
 

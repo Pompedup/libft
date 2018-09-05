@@ -6,7 +6,7 @@
 /*   By: abezanni <abezanni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/08/19 01:20:44 by pompedup          #+#    #+#             */
-/*   Updated: 2018/09/02 14:58:50 by abezanni         ###   ########.fr       */
+/*   Updated: 2018/09/05 15:32:41 by abezanni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,7 +38,7 @@ static void	ull_lltoa(t_printf *dt, t_flags *dt_flags,
 					intmax_t nbr, t_bool signe)
 {
 	get_len(dt_flags, signe && nbr < 0 ? -nbr : nbr);
-	apply_flags(dt_flags, signe && nbr < 0, signe, nbr);
+	apply_flags_numbers(dt_flags, signe && nbr < 0, signe, nbr);
 	if (!(dt_flags->flags & MINUS))
 		padding(dt, dt_flags, FALSE);
 	if (dt_flags->c || dt_flags->hash)
