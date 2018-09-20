@@ -6,13 +6,13 @@
 /*   By: abezanni <abezanni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/09 13:27:14 by abezanni          #+#    #+#             */
-/*   Updated: 2018/06/08 15:06:47 by abezanni         ###   ########.fr       */
+/*   Updated: 2018/09/20 15:21:32 by abezanni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_listremove(t_list **alst, size_t content_size)
+void	ft_listremoveone(t_list **alst, size_t content_size)
 {
 	t_list *pre;
 	t_list *tmp;

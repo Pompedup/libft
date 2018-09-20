@@ -6,13 +6,13 @@
 /*   By: abezanni <abezanni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/29 12:47:14 by abezanni          #+#    #+#             */
-/*   Updated: 2018/06/08 15:08:31 by abezanni         ###   ########.fr       */
+/*   Updated: 2018/09/20 15:30:54 by abezanni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "get_next_line.h"
 
-t_list	*ft_find_fd(t_list **lst, size_t fd)
+static t_list	*ft_find_fd(t_list **lst, size_t fd)
 {
 	t_list *tmp;
 
@@ -37,13 +37,13 @@ t_list	*ft_find_fd(t_list **lst, size_t fd)
 	return (tmp);
 }
 
-int		ft_line_to_null(char **line)
+static int		ft_line_to_null(char **line)
 {
 	*line = NULL;
 	return (0);
 }
 
-int		ft_full_line(t_list *lst, char **line, int ret)
+static int		ft_full_line(t_list *lst, char **line, int ret)
 {
 	char *tmp;
 	char *to_free;
@@ -71,7 +71,7 @@ int		ft_full_line(t_list *lst, char **line, int ret)
 	return (1);
 }
 
-int		ft_read(t_list *tmp, char **line)
+static int		ft_read(t_list *tmp, char **line)
 {
 	int		ret;
 	char	buffer[BUFF_SIZE + 1];
@@ -95,18 +95,23 @@ int		ft_read(t_list *tmp, char **line)
 	return (ft_full_line(tmp, line, ret));
 }
 
-int		get_next_line(const int fd, char **line)
+int				get_next_line(const int fd, char **line)
 {
 	static t_list	*lst;
 	t_list			*tmp;
 	int				ret;
 
+	if (!line)
+	{
+		ft_listremoveone(&lst, fd);
+		return (0);
+	}
 	tmp = ft_find_fd(&lst, (size_t)fd);
 	if (tmp->content && (ft_strchr((char*)(tmp->content), '\n')) != NULL)
 		return (ft_full_line(tmp, line, 1));
 	if ((ret = ft_read(tmp, line)) == 0)
 	{
-		ft_listremove(&lst, fd);
+		ft_listremoveone(&lst, fd);
 		return (0);
 	}
 	return (ret);

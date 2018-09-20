@@ -6,13 +6,13 @@
 /*   By: abezanni <abezanni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/09 13:27:14 by abezanni          #+#    #+#             */
-/*   Updated: 2017/12/08 15:16:06 by abezanni         ###   ########.fr       */
+/*   Updated: 2018/09/20 15:21:37 by abezanni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_lstremove(t_list **alst, size_t content_size)
+void	ft_lstremoveone(t_list **alst, size_t content_size)
 {
 	t_list *pre;
 	t_list *tmp;

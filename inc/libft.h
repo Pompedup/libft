@@ -6,7 +6,7 @@
 /*   By: abezanni <abezanni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/06 17:43:03 by abezanni          #+#    #+#             */
-/*   Updated: 2018/09/02 14:33:25 by abezanni         ###   ########.fr       */
+/*   Updated: 2018/09/20 15:21:58 by abezanni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,7 +52,7 @@ void				ft_listdelone(t_list **alst, void (*del)(void *, size_t));
 void				ft_listiter(t_list *lst, void (*f)(t_list *elem));
 t_list				*ft_listmap(t_list *lst, t_list *(*f)(t_list *elem));
 t_list				*ft_listnew(void const *content, size_t content_size);
-void				ft_listremove(t_list **alst, size_t content_size);
+void				ft_listremoveone(t_list **alst, size_t content_size);
 
 /*
 ********************************************************************************
@@ -67,7 +67,7 @@ void				ft_lstdelone(t_lst *lst, size_t to_free);
 void				ft_lstiter(t_list *lst, void (*f)(t_list *elem));
 t_lst				*ft_lstnew(void *first, void *second, void *third, int nb);
 void				ft_lstpushback(t_lst **begin_list, t_lst *new);
-void				ft_lstremove(t_list **alst, size_t content_size);
+void				ft_lstremoveone(t_list **alst, size_t content_size);
 
 /*
 ********************************************************************************
