@@ -6,7 +6,11 @@
 #    By: abezanni <abezanni@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/11/09 17:32:49 by abezanni          #+#    #+#              #
+<<<<<<< HEAD
 #    Updated: 2018/09/24 17:45:17 by abezanni         ###   ########.fr        #
+=======
+#    Updated: 2018/09/03 22:43:35 by abezanni         ###   ########.fr        #
+>>>>>>> aaeb61f891038c4fbb43fa280c831530ee9e5760
 #                                                                              #
 # **************************************************************************** #
 
@@ -104,6 +108,7 @@ STR =		ft_nbr_words_charset.c\
 			ft_strmapi.c\
 			ft_strmjoin.c\
 			ft_strncat.c\
+			ft_strnchr.c\
 			ft_strncmp.c\
 			ft_strncpy.c\
 			ft_strndup.c\
