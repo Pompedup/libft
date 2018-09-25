@@ -6,7 +6,7 @@
 /*   By: abezanni <abezanni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/06 17:15:12 by abezanni          #+#    #+#             */
-/*   Updated: 2018/09/25 13:06:51 by abezanni         ###   ########.fr       */
+/*   Updated: 2018/09/25 13:13:29 by abezanni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,10 +14,6 @@
 
 int	ft_strcmp(const char *s1, const char *s2)
 {
-	if (!s1)
-		return (-*s2);
-	if (!s2)
-		return (*s1);
 	while (*s1 == *s2 && *s1 != '\0' && *s2 != '\0')
 	{
 		s1++;
