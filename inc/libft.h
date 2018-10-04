@@ -6,7 +6,7 @@
 /*   By: abezanni <abezanni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/06 17:43:03 by abezanni          #+#    #+#             */
-/*   Updated: 2018/09/24 17:45:01 by abezanni         ###   ########.fr       */
+/*   Updated: 2018/10/04 18:37:38 by abezanni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -139,6 +139,8 @@ void				ft_putstr(char const *s);
 
 int					ft_nbr_words_charset(char *str, char *charset);
 char				**ft_split_charset(char *str, char *charset);
+char				*ft_stpcpy(char *dest, const char *src);
+char				*ft_stpncpy(char *dest, const char *src, size_t len);
 char				*ft_strcat(char *dst, const char *src);
 char				*ft_strchr(const char *s, int c);
 char				*ft_strchrs(const char *s, const char *cs);
