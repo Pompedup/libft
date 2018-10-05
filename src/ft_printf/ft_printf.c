@@ -6,7 +6,7 @@
 /*   By: abezanni <abezanni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/12/12 14:38:10 by abezanni          #+#    #+#             */
-/*   Updated: 2018/09/02 14:35:33 by abezanni         ###   ########.fr       */
+/*   Updated: 2018/10/05 18:13:29 by abezanni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,7 @@ static void	ft_init(t_printf *dt, int fd, char *str, char option)
 		dt->str = ft_strdup("");
 	dt->tot = 0;
 	dt->fd = fd;
+	dt->present_star = FALSE;
 }
 
 int			ft_printf(char *format, ...)
