@@ -6,7 +6,7 @@
 /*   By: abezanni <abezanni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/12/12 14:38:37 by abezanni          #+#    #+#             */
-/*   Updated: 2018/10/05 18:26:02 by abezanni         ###   ########.fr       */
+/*   Updated: 2018/10/05 19:20:01 by abezanni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,8 +46,6 @@ typedef struct	s_printf
 	char		*buf_move;
 	char		*str;
 	int			less;
-	int			star;
-	t_bool		present_star;
 	int			tot;
 	va_list		ap;
 }				t_printf;
