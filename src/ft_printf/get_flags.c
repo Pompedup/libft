@@ -6,13 +6,13 @@
 /*   By: abezanni <abezanni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/08/18 16:55:07 by abezanni          #+#    #+#             */
-/*   Updated: 2018/10/05 18:10:53 by abezanni         ###   ########.fr       */
+/*   Updated: 2018/10/05 18:26:26 by abezanni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-int			get_star(t_printf *dt)
+static int	get_star(t_printf *dt)
 {
 	if (!dt->present_star)
 	{
@@ -43,8 +43,8 @@ char		*get_flags(t_printf *dt, char *format, t_flags *dt_flags)
 	{
 		if (tmp == -1 || tmp == 12)
 		{
-			dt_flags->space = tmp == 6 ? get_star(dt) : ft_atoi(format);
-			format += tmp == 6 ? 0 : ft_nbr_len(dt_flags->space) - 1;
+			dt_flags->space = tmp == 12 ? get_star(dt) : ft_atoi(format);
+			format += tmp == 12 ? 0 : ft_nbr_len(dt_flags->space) - 1;
 			tmp = -1;
 		}
 		format++;

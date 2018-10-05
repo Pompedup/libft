@@ -6,7 +6,7 @@
 /*   By: abezanni <abezanni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/12/12 14:38:37 by abezanni          #+#    #+#             */
-/*   Updated: 2018/10/05 18:18:34 by abezanni         ###   ########.fr       */
+/*   Updated: 2018/10/05 18:26:02 by abezanni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@
 # define HEXAMIN	"0123456789abcdef"
 # define HEXAMAX	"0123456789ABCDEF"
 # define CONV		"sSpbdDioOuUxXcC%"
-# define FLAG		".+ -0#hhlljz"
+# define FLAG		".+ -0#hhlljz*"
 # define DOT		(1 << 0)
 # define PLUS		(1 << 1)
 # define SPACE		(1 << 2)
