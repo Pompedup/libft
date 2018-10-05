@@ -3,14 +3,24 @@
 /*                                                        :::      ::::::::   */
 /*   get_flags.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: pompedup <pompedup@student.42.fr>          +#+  +:+       +#+        */
+/*   By: abezanni <abezanni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/08/18 16:55:07 by abezanni          #+#    #+#             */
-/*   Updated: 2018/08/30 15:03:42 by pompedup         ###   ########.fr       */
+/*   Updated: 2018/10/05 17:28:05 by abezanni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
+
+int			get_star(t_printf *dt)
+{
+	if (!dt->present_star)
+	{
+		dt->star = va_arg(dt->ap, int);
+		dt->present_star = TRUE;
+	}
+	return (dt->star);
+}
 
 static char	*get_convert(char *format, t_flags *dt_flags, int conv)
 {
@@ -24,26 +34,27 @@ static char	*get_convert(char *format, t_flags *dt_flags, int conv)
 	return (format);
 }
 
-char		*get_flags(char *format, t_flags *dt_flags)
+char		*get_flags(t_printf *dt, char *format, t_flags *dt_flags)
 {
 	int		tmp;
 
 	while ((*format && (tmp = ft_strposchr(FLAG, *format)) > -1)
 		|| ft_isdigit(*format))
 	{
-		if (tmp == -1)
+		if (tmp == -1 || tmp == 6)
 		{
-			dt_flags->space = ft_atoi(format);
+			dt_flags->space = tmp == 6 ? get_star(dt) : ft_atoi(format);
 			format += ft_nbr_len(dt_flags->space) - 1;
 		}
 		format++;
 		if (1 << tmp == DOT)
 		{
-			dt_flags->precision = ft_atoi(format);
+			dt_flags->precision = *format == '*' ?\
+				get_star(dt) : ft_atoi(format);
 			while (ft_isdigit(*format))
 				format++;
 		}
-		if (tmp > 5)
+		if (tmp > 6)
 			format = get_convert(format, dt_flags, tmp);
 		else if (tmp > -1)
 			dt_flags->flags |= 1 << tmp;

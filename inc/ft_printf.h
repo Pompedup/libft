@@ -6,7 +6,7 @@
 /*   By: abezanni <abezanni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/12/12 14:38:37 by abezanni          #+#    #+#             */
-/*   Updated: 2018/09/05 15:33:02 by abezanni         ###   ########.fr       */
+/*   Updated: 2018/10/05 17:21:28 by abezanni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@
 # define HEXAMIN	"0123456789abcdef"
 # define HEXAMAX	"0123456789ABCDEF"
 # define CONV		"sSpbdDioOuUxXcC%"
-# define FLAG		".+ -0#hhlljz"
+# define FLAG		".+ -0#*hhlljz"
 # define DOT		(1 << 0)
 # define PLUS		(1 << 1)
 # define SPACE		(1 << 2)
@@ -46,6 +46,8 @@ typedef struct	s_printf
 	char		*buf_move;
 	char		*str;
 	int			less;
+	int			star;
+	t_bool		present_star;
 	int			tot;
 	va_list		ap;
 }				t_printf;
@@ -103,7 +105,7 @@ int				ft_sprintf(char **str, char *format, ...);
 ********************************************************************************
 */
 
-char			*get_flags(char *format, t_flags *data);
+char			*get_flags(t_printf *dt, char *format, t_flags *data);
 
 /*
 ********************************************************************************
