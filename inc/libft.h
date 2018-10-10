@@ -6,7 +6,7 @@
 /*   By: abezanni <abezanni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/06 17:43:03 by abezanni          #+#    #+#             */
-/*   Updated: 2018/10/04 18:37:38 by abezanni         ###   ########.fr       */
+/*   Updated: 2018/10/10 15:34:47 by abezanni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,6 @@ int					ft_isalnum(int c);
 int					ft_isalpha(int c);
 int					ft_isascii(int c);
 int					ft_isdigit(int c);
-int					ft_isint(char *str);
 int					ft_islower(int c);
 int					ft_isprint(int c);
 int					ft_isspace(int c);
@@ -137,6 +136,7 @@ void				ft_putstr(char const *s);
 ********************************************************************************
 */
 
+t_bool				ft_isint(char *str, size_t len);
 int					ft_nbr_words_charset(char *str, char *charset);
 char				**ft_split_charset(char *str, char *charset);
 char				*ft_stpcpy(char *dest, const char *src);
@@ -159,6 +159,7 @@ size_t				ft_strlen(const char *s);
 char				*ft_strmap(char const *s, char (*f)(char));
 char				*ft_strmapi(char const *s, char (*f)(unsigned int, char));
 char				*ft_strmjoin(char *s1, char *s2, int tofree);
+t_bool				ft_strnbrlen(char *str, size_t *len);
 char				*ft_strncat(char *s1, const char *s2, size_t n);
 int					ft_strncmp(const char *s1, const char *s2, size_t n);
 char				*ft_strncpy(char *dst, const char *src, size_t len);

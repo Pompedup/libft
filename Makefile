@@ -6,7 +6,7 @@
 #    By: abezanni <abezanni@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/11/09 17:32:49 by abezanni          #+#    #+#              #
-#    Updated: 2018/10/04 18:38:03 by abezanni         ###   ########.fr        #
+#    Updated: 2018/10/10 15:56:24 by abezanni         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,7 +14,6 @@ CHAR =		ft_isalnum.c\
 			ft_isalpha.c\
 			ft_isascii.c\
 			ft_isdigit.c\
-			ft_isint.c\
 			ft_islower.c\
 			ft_isprint.c\
 			ft_isspace.c\
@@ -83,7 +82,8 @@ PRINT =		ft_putchar_fd.c\
 			ft_putstr_fd.c\
 			ft_putstr.c\
 
-STR =		ft_nbr_words_charset.c\
+STR =		ft_isint.c\
+			ft_nbr_words_charset.c\
 			ft_split_charset.c\
 			ft_stpcpy.c\
 			ft_stpncpy.c\
@@ -105,6 +105,7 @@ STR =		ft_nbr_words_charset.c\
 			ft_strmap.c\
 			ft_strmapi.c\
 			ft_strmjoin.c\
+			ft_strnbrlen.c\
 			ft_strncat.c\
 			ft_strncmp.c\
 			ft_strncpy.c\

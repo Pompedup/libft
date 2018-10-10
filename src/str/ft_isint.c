@@ -3,20 +3,17 @@
 /*                                                        :::      ::::::::   */
 /*   ft_isint.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: adibou <adibou@student.42.fr>              +#+  +:+       +#+        */
+/*   By: abezanni <abezanni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/06/08 14:58:08 by abezanni          #+#    #+#             */
-/*   Updated: 2018/08/08 12:13:58 by adibou           ###   ########.fr       */
+/*   Updated: 2018/10/10 14:40:14 by abezanni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_isint(char *str)
+t_bool	ft_isint(char *str, size_t len)
 {
-	int		len;
-
-	len = ft_strlen(str);
 	if ((*str != '+' && *str != '-' && len > 10) || len > 11 || len == 0)
 		return (0);
 	if (len > 9 && ft_strcmp(*str == '+' || *str == '-' ? str + 1 : str,
