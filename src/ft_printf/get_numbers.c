@@ -6,7 +6,7 @@
 /*   By: abezanni <abezanni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/08/19 01:20:44 by pompedup          #+#    #+#             */
-/*   Updated: 2018/09/05 15:32:41 by abezanni         ###   ########.fr       */
+/*   Updated: 2018/10/11 15:00:02 by abezanni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -64,7 +64,6 @@ void		get_signed(t_printf *dt, t_flags *dt_flags, char type)
 {
 	intmax_t tmp;
 
-	(void)type;
 	dt_flags->base = 10;
 	if (dt_flags->flags & HH && type != 'D')
 		tmp = (intmax_t)(char)va_arg(dt->ap, int);

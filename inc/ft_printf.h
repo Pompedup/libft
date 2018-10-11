@@ -6,7 +6,7 @@
 /*   By: abezanni <abezanni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/12/12 14:38:37 by abezanni          #+#    #+#             */
-/*   Updated: 2018/10/05 19:20:01 by abezanni         ###   ########.fr       */
+/*   Updated: 2018/10/11 15:32:46 by abezanni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,6 +34,11 @@
 # define FT_PRINTF	0
 # define FT_SPRINTF	1
 # define FT_FPRINTF	2
+
+# define HASH_HEXMAX	"0X"
+# define HASH_HEXMIN	"0x"
+# define HASH_BIN		"0b"
+# define HASH_OCT		"0"
 
 # define BUFF_PRF	500
 

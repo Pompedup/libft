@@ -6,7 +6,7 @@
 /*   By: abezanni <abezanni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/06 17:43:03 by abezanni          #+#    #+#             */
-/*   Updated: 2018/10/10 15:34:47 by abezanni         ###   ########.fr       */
+/*   Updated: 2018/10/11 15:30:33 by abezanni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -107,6 +107,7 @@ char				*ft_itoa(int n);
 char				*ft_lltoa_base(long long value, int base, int maj);
 int					ft_nbr_len(int n);
 int					ft_smallest(int a, int b);
+int					ft_sqrt(int nb);
 char				*ft_uitoa_base(unsigned int value, int base, int maj);
 char				*ft_ulltoa_base(unsigned long long val, int base, int maj);
 
