@@ -6,7 +6,7 @@
 #    By: abezanni <abezanni@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/11/09 17:32:49 by abezanni          #+#    #+#              #
-#    Updated: 2018/10/10 15:56:24 by abezanni         ###   ########.fr        #
+#    Updated: 2018/10/11 15:34:18 by abezanni         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -69,6 +69,7 @@ NUM =		ft_abs.c\
 			ft_lltoa_base.c\
 			ft_nbr_len.c\
 			ft_smallest.c\
+			ft_sqrt.c\
 			ft_uitoa_base.c\
 			ft_ulltoa_base.c\
 
