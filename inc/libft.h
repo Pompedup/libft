@@ -6,7 +6,7 @@
 /*   By: abezanni <abezanni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/06 17:43:03 by abezanni          #+#    #+#             */
-/*   Updated: 2018/10/11 15:30:33 by abezanni         ###   ########.fr       */
+/*   Updated: 2018/10/13 16:04:52 by abezanni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -150,6 +150,7 @@ int					ft_strcmp(const char *s1, const char *s2);
 char				*ft_strcpy(char *dst, const char *src);
 void				ft_strdel(char **as);
 char				*ft_strdup(const char *s1);
+char				*ft_strendstr(const char *str, const char *to_find);
 int					ft_strequ(char const *s1, char const *s2);
 int					ft_strisall(char *str, int	(*f)(int c));
 void				ft_striter(char *s, void (*f)(char *));

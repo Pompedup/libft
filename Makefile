@@ -6,7 +6,7 @@
 #    By: abezanni <abezanni@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/11/09 17:32:49 by abezanni          #+#    #+#              #
-#    Updated: 2018/10/11 15:34:18 by abezanni         ###   ########.fr        #
+#    Updated: 2018/10/13 16:05:06 by abezanni         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -96,6 +96,7 @@ STR =		ft_isint.c\
 			ft_strcpy.c\
 			ft_strdel.c\
 			ft_strdup.c\
+			ft_strendstr.c\
 			ft_strequ.c\
 			ft_strisall.c\
 			ft_striter.c\
