@@ -6,7 +6,7 @@
 /*   By: abezanni <abezanni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/06 17:43:03 by abezanni          #+#    #+#             */
-/*   Updated: 2018/10/13 16:04:52 by abezanni         ###   ########.fr       */
+/*   Updated: 2018/10/13 17:27:45 by abezanni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -137,7 +137,6 @@ void				ft_putstr(char const *s);
 ********************************************************************************
 */
 
-t_bool				ft_isint(char *str, size_t len);
 int					ft_nbr_words_charset(char *str, char *charset);
 char				**ft_split_charset(char *str, char *charset);
 char				*ft_stpcpy(char *dest, const char *src);
@@ -153,6 +152,8 @@ char				*ft_strdup(const char *s1);
 char				*ft_strendstr(const char *str, const char *to_find);
 int					ft_strequ(char const *s1, char const *s2);
 int					ft_strisall(char *str, int	(*f)(int c));
+t_bool				ft_strisint(char *str, size_t len);
+t_bool				ft_strisuint(char *str, size_t len);
 void				ft_striter(char *s, void (*f)(char *));
 void				ft_striteri(char *s, void (*f)(unsigned int, char *));
 char				*ft_strjoin(char const *s1, char const *s2);

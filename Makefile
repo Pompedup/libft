@@ -6,7 +6,7 @@
 #    By: abezanni <abezanni@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/11/09 17:32:49 by abezanni          #+#    #+#              #
-#    Updated: 2018/10/13 16:05:06 by abezanni         ###   ########.fr        #
+#    Updated: 2018/10/13 17:28:19 by abezanni         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -83,8 +83,7 @@ PRINT =		ft_putchar_fd.c\
 			ft_putstr_fd.c\
 			ft_putstr.c\
 
-STR =		ft_isint.c\
-			ft_nbr_words_charset.c\
+STR =		ft_nbr_words_charset.c\
 			ft_split_charset.c\
 			ft_stpcpy.c\
 			ft_stpncpy.c\
@@ -99,6 +98,8 @@ STR =		ft_isint.c\
 			ft_strendstr.c\
 			ft_strequ.c\
 			ft_strisall.c\
+			ft_strisint.c\
+			ft_strisuint.c\
 			ft_striter.c\
 			ft_striteri.c\
 			ft_strjoin.c\

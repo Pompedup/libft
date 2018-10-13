@@ -1,23 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strnbrlen.c                                     :+:      :+:    :+:   */
+/*   ft_strisuint.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: abezanni <abezanni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/10/10 15:34:16 by abezanni          #+#    #+#             */
-/*   Updated: 2018/10/13 17:21:42 by abezanni         ###   ########.fr       */
+/*   Created: 2018/06/08 14:58:08 by abezanni          #+#    #+#             */
+/*   Updated: 2018/10/13 17:28:53 by abezanni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-t_bool	ft_strnbrlen(char *str, size_t *len)
+t_bool	ft_strisuint(char *str, size_t len)
 {
-	*len = 0;
-	if (*str == '-')
-		*len = 1;
-	while (ft_isdigit(str[*len]))
-		(*len)++;
-	return (*len ? TRUE : FALSE);
+	if ((*str != '+' && len > 10) || len > 11 || len == 0)
+		return (FALSE);
+	if (len > 9 && ft_strcmp(*str == '+' ? str + 1 : str, "4294967295") > 0)
+		return (FALSE);
+	if ((*str == '+' && !*(str + 1)) || !ft_strnis(*str == '+' ? str + 1 : str,\
+		ft_isdigit, *str == '+' ? len - 1 : len))
+		return (FALSE);
+	return (TRUE);
 }
