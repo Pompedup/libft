@@ -6,7 +6,7 @@
 /*   By: abezanni <abezanni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/08/18 16:55:07 by abezanni          #+#    #+#             */
-/*   Updated: 2018/10/05 19:22:29 by abezanni         ###   ########.fr       */
+/*   Updated: 2018/10/20 21:36:31 by abezanni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,6 +29,16 @@ static char	*get_convert(char *format, t_flags *dt_flags, int conv)
 	return (format);
 }
 
+static char	*move_format(char *format)
+{
+	if (*format == '*')
+		format++;
+	else
+		while (ft_isdigit(*format))
+			format++;
+	return (format);
+}
+
 char		*get_flags(t_printf *dt, char *format, t_flags *dt_flags)
 {
 	int		tmp;
@@ -44,12 +54,9 @@ char		*get_flags(t_printf *dt, char *format, t_flags *dt_flags)
 		format++;
 		if (1 << tmp == DOT)
 		{
-			dt_flags->precision = *format == '*' ? get_star(dt) : ft_atoi(format);
-			if (*format == '*')
-				format++;
-			else
-				while (ft_isdigit(*format))
-					format++;
+			dt_flags->precision = *format == '*' ? get_star(dt)\
+															: ft_atoi(format);
+			format = move_format(format);
 		}
 		if (tmp > 5)
 			format = get_convert(format, dt_flags, tmp);

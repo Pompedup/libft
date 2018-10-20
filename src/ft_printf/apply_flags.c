@@ -6,7 +6,7 @@
 /*   By: abezanni <abezanni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/08/23 14:15:38 by abezanni          #+#    #+#             */
-/*   Updated: 2018/10/11 15:31:40 by abezanni         ###   ########.fr       */
+/*   Updated: 2018/10/20 21:36:44 by abezanni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,7 +42,7 @@ static void	apply_hash(t_flags *dt_flags, uintmax_t nbr)
 		|| dt_flags->type == 'p')
 	{
 		if (dt_flags->base == 16)
-			dt_flags->hash = dt_flags->type == 'X' ? HASH_HEXMAX :HASH_HEXMIN;
+			dt_flags->hash = dt_flags->type == 'X' ? HASH_HEXMAX : HASH_HEXMIN;
 		else if (dt_flags->base == 2)
 			dt_flags->hash = HASH_BIN;
 		else if (!dt_flags->precision)
