@@ -6,7 +6,7 @@
 /*   By: abezanni <abezanni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/06 17:43:03 by abezanni          #+#    #+#             */
-/*   Updated: 2018/09/25 13:14:33 by abezanni         ###   ########.fr       */
+/*   Updated: 2018/10/21 17:37:26 by abezanni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,6 @@ int					ft_isalnum(int c);
 int					ft_isalpha(int c);
 int					ft_isascii(int c);
 int					ft_isdigit(int c);
-int					ft_isint(char *str);
 int					ft_islower(int c);
 int					ft_isprint(int c);
 int					ft_isspace(int c);
@@ -108,6 +107,7 @@ char				*ft_itoa(int n);
 char				*ft_lltoa_base(long long value, int base, int maj);
 int					ft_nbr_len(int n);
 int					ft_smallest(int a, int b);
+int					ft_sqrt(int nb);
 char				*ft_uitoa_base(unsigned int value, int base, int maj);
 char				*ft_ulltoa_base(unsigned long long val, int base, int maj);
 
@@ -139,6 +139,8 @@ void				ft_putstr(char const *s);
 
 int					ft_nbr_words_charset(char *str, char *charset);
 char				**ft_split_charset(char *str, char *charset);
+char				*ft_stpcpy(char *dest, const char *src);
+char				*ft_stpncpy(char *dest, const char *src, size_t len);
 char				*ft_strcat(char *dst, const char *src);
 char				*ft_strchr(const char *s, int c);
 char				*ft_strchrs(const char *s, const char *cs);
@@ -147,8 +149,11 @@ int					ft_strcmp(const char *s1, const char *s2);
 char				*ft_strcpy(char *dst, const char *src);
 void				ft_strdel(char **as);
 char				*ft_strdup(const char *s1);
+char				*ft_strendstr(const char *str, const char *to_find);
 int					ft_strequ(char const *s1, char const *s2);
 int					ft_strisall(char *str, int	(*f)(int c));
+t_bool				ft_strisint(char *str, size_t len);
+t_bool				ft_strisuint(char *str, size_t len);
 void				ft_striter(char *s, void (*f)(char *));
 void				ft_striteri(char *s, void (*f)(unsigned int, char *));
 char				*ft_strjoin(char const *s1, char const *s2);
@@ -157,6 +162,7 @@ size_t				ft_strlen(const char *s);
 char				*ft_strmap(char const *s, char (*f)(char));
 char				*ft_strmapi(char const *s, char (*f)(unsigned int, char));
 char				*ft_strmjoin(char *s1, char *s2, int tofree);
+t_bool				ft_strnbrlen(char *str, size_t *len);
 char				*ft_strncat(char *s1, const char *s2, size_t n);
 char				*ft_strnchr(const char *s, int c, int len);
 int					ft_strncmp(const char *s1, const char *s2, size_t n);

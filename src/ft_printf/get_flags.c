@@ -3,14 +3,19 @@
 /*                                                        :::      ::::::::   */
 /*   get_flags.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: pompedup <pompedup@student.42.fr>          +#+  +:+       +#+        */
+/*   By: abezanni <abezanni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/08/18 16:55:07 by abezanni          #+#    #+#             */
-/*   Updated: 2018/08/30 15:03:42 by pompedup         ###   ########.fr       */
+/*   Updated: 2018/10/20 21:36:31 by abezanni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
+
+static int	get_star(t_printf *dt)
+{
+	return (va_arg(dt->ap, int));
+}
 
 static char	*get_convert(char *format, t_flags *dt_flags, int conv)
 {
@@ -24,24 +29,34 @@ static char	*get_convert(char *format, t_flags *dt_flags, int conv)
 	return (format);
 }
 
-char		*get_flags(char *format, t_flags *dt_flags)
+static char	*move_format(char *format)
+{
+	if (*format == '*')
+		format++;
+	else
+		while (ft_isdigit(*format))
+			format++;
+	return (format);
+}
+
+char		*get_flags(t_printf *dt, char *format, t_flags *dt_flags)
 {
 	int		tmp;
 
 	while ((*format && (tmp = ft_strposchr(FLAG, *format)) > -1)
 		|| ft_isdigit(*format))
 	{
-		if (tmp == -1)
+		if (tmp == -1 || tmp == 12)
 		{
-			dt_flags->space = ft_atoi(format);
-			format += ft_nbr_len(dt_flags->space) - 1;
+			dt_flags->space = tmp == 12 ? get_star(dt) : ft_atoi(format);
+			format += tmp == 12 ? 0 : ft_nbr_len(dt_flags->space) - 1;
 		}
 		format++;
 		if (1 << tmp == DOT)
 		{
-			dt_flags->precision = ft_atoi(format);
-			while (ft_isdigit(*format))
-				format++;
+			dt_flags->precision = *format == '*' ? get_star(dt)\
+															: ft_atoi(format);
+			format = move_format(format);
 		}
 		if (tmp > 5)
 			format = get_convert(format, dt_flags, tmp);

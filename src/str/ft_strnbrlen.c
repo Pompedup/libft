@@ -1,21 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strposchrs.c                                    :+:      :+:    :+:   */
+/*   ft_strnbrlen.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: abezanni <abezanni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/08/19 00:28:21 by abezanni          #+#    #+#             */
-/*   Updated: 2018/10/21 17:40:32 by abezanni         ###   ########.fr       */
+/*   Created: 2018/10/10 15:34:16 by abezanni          #+#    #+#             */
+/*   Updated: 2018/10/13 17:21:42 by abezanni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_strposchrs(char *str, char *charset)
+t_bool	ft_strnbrlen(char *str, size_t *len)
 {
-	char *tmp;
-
-	tmp = ft_strchrs(str, charset);
-	return (tmp ? tmp - str : -1);
+	*len = 0;
+	if (*str == '-')
+		*len = 1;
+	while (ft_isdigit(str[*len]))
+		(*len)++;
+	return (*len ? TRUE : FALSE);
 }

@@ -1,29 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isint.c                                         :+:      :+:    :+:   */
+/*   ft_strisint.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: adibou <adibou@student.42.fr>              +#+  +:+       +#+        */
+/*   By: abezanni <abezanni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/06/08 14:58:08 by abezanni          #+#    #+#             */
-/*   Updated: 2018/08/08 12:13:58 by adibou           ###   ########.fr       */
+/*   Updated: 2018/10/13 17:28:56 by abezanni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_isint(char *str)
+t_bool	ft_strisint(char *str, size_t len)
 {
-	int		len;
-
-	len = ft_strlen(str);
 	if ((*str != '+' && *str != '-' && len > 10) || len > 11 || len == 0)
-		return (0);
+		return (FALSE);
 	if (len > 9 && ft_strcmp(*str == '+' || *str == '-' ? str + 1 : str,
 		*str == '-' ? "2147483648" : "2147483647") > 0)
-		return (0);
+		return (FALSE);
 	if (((*str == '+' || *str == '-') && !*(str + 1)) ||
-		!ft_strisall(*str == '+' || *str == '-' ? str + 1 : str, ft_isdigit))
-		return (0);
-	return (1);
+		!ft_strnis(*str == '+' || *str == '-' ? str + 1 : str, ft_isdigit,\
+		*str == '+' || *str == '-' ? len - 1 : len))
+		return (FALSE);
+	return (TRUE);
 }

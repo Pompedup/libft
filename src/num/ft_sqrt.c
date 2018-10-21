@@ -1,21 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strposchrs.c                                    :+:      :+:    :+:   */
+/*   ft_sqrt.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: abezanni <abezanni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/08/19 00:28:21 by abezanni          #+#    #+#             */
-/*   Updated: 2018/10/21 17:40:32 by abezanni         ###   ########.fr       */
+/*   Created: 2018/10/11 15:28:21 by abezanni          #+#    #+#             */
+/*   Updated: 2018/10/11 15:30:10 by abezanni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_strposchrs(char *str, char *charset)
+int	ft_sqrt(int nb)
 {
-	char *tmp;
+	int back;
 
-	tmp = ft_strchrs(str, charset);
-	return (tmp ? tmp - str : -1);
+	back = 1;
+	if (nb <= 0)
+		return (0);
+	while ((back * back < nb) && nb != 0)
+		back++;
+	return (nb % back == 0) ? back : 0;
 }

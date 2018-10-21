@@ -1,21 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strposchrs.c                                    :+:      :+:    :+:   */
+/*   ft_strisuint.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: abezanni <abezanni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/08/19 00:28:21 by abezanni          #+#    #+#             */
-/*   Updated: 2018/10/21 17:40:32 by abezanni         ###   ########.fr       */
+/*   Created: 2018/06/08 14:58:08 by abezanni          #+#    #+#             */
+/*   Updated: 2018/10/13 17:28:53 by abezanni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_strposchrs(char *str, char *charset)
+t_bool	ft_strisuint(char *str, size_t len)
 {
-	char *tmp;
-
-	tmp = ft_strchrs(str, charset);
-	return (tmp ? tmp - str : -1);
+	if ((*str != '+' && len > 10) || len > 11 || len == 0)
+		return (FALSE);
+	if (len > 9 && ft_strcmp(*str == '+' ? str + 1 : str, "4294967295") > 0)
+		return (FALSE);
+	if ((*str == '+' && !*(str + 1)) || !ft_strnis(*str == '+' ? str + 1 : str,\
+		ft_isdigit, *str == '+' ? len - 1 : len))
+		return (FALSE);
+	return (TRUE);
 }

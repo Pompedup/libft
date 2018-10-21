@@ -1,21 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strposchrs.c                                    :+:      :+:    :+:   */
+/*   ft_stpcpy.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: abezanni <abezanni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/08/19 00:28:21 by abezanni          #+#    #+#             */
-/*   Updated: 2018/10/21 17:40:32 by abezanni         ###   ########.fr       */
+/*   Created: 2017/11/06 17:16:24 by abezanni          #+#    #+#             */
+/*   Updated: 2018/10/04 18:37:29 by abezanni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_strposchrs(char *str, char *charset)
+char	*ft_stpcpy(char *dest, const char *src)
 {
-	char *tmp;
+	int i;
 
-	tmp = ft_strchrs(str, charset);
-	return (tmp ? tmp - str : -1);
+	i = 0;
+	while (src[i] != '\0')
+	{
+		dest[i] = src[i];
+		i++;
+	}
+	dest[i] = '\0';
+	return (dest + i);
 }

@@ -6,7 +6,7 @@
 /*   By: abezanni <abezanni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/12/12 14:38:37 by abezanni          #+#    #+#             */
-/*   Updated: 2018/09/25 13:14:29 by abezanni         ###   ########.fr       */
+/*   Updated: 2018/10/21 17:36:24 by abezanni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@
 # define HEXAMIN	"0123456789abcdef"
 # define HEXAMAX	"0123456789ABCDEF"
 # define CONV		"sSpbdDioOuUxXcC%"
-# define FLAG		".+ -0#hhlljz"
+# define FLAG		".+ -0#hhlljz*"
 # define DOT		(1 << 0)
 # define PLUS		(1 << 1)
 # define SPACE		(1 << 2)
@@ -34,6 +34,11 @@
 # define FT_PRINTF	0
 # define FT_SPRINTF	1
 # define FT_FPRINTF	2
+
+# define HASH_HEXMAX	"0X"
+# define HASH_HEXMIN	"0x"
+# define HASH_BIN		"0b"
+# define HASH_OCT		"0"
 
 # define BUFF_PRF	500
 
@@ -103,7 +108,7 @@ int				ft_sprintf(char **str, char *format, ...);
 ********************************************************************************
 */
 
-char			*get_flags(char *format, t_flags *data);
+char			*get_flags(t_printf *dt, char *format, t_flags *data);
 
 /*
 ********************************************************************************

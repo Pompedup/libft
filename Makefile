@@ -6,11 +6,7 @@
 #    By: abezanni <abezanni@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/11/09 17:32:49 by abezanni          #+#    #+#              #
-<<<<<<< HEAD
-#    Updated: 2018/09/24 17:45:17 by abezanni         ###   ########.fr        #
-=======
-#    Updated: 2018/09/03 22:43:35 by abezanni         ###   ########.fr        #
->>>>>>> aaeb61f891038c4fbb43fa280c831530ee9e5760
+#    Updated: 2018/10/21 17:37:51 by abezanni         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -18,7 +14,6 @@ CHAR =		ft_isalnum.c\
 			ft_isalpha.c\
 			ft_isascii.c\
 			ft_isdigit.c\
-			ft_isint.c\
 			ft_islower.c\
 			ft_isprint.c\
 			ft_isspace.c\
@@ -74,6 +69,7 @@ NUM =		ft_abs.c\
 			ft_lltoa_base.c\
 			ft_nbr_len.c\
 			ft_smallest.c\
+			ft_sqrt.c\
 			ft_uitoa_base.c\
 			ft_ulltoa_base.c\
 
@@ -89,6 +85,8 @@ PRINT =		ft_putchar_fd.c\
 
 STR =		ft_nbr_words_charset.c\
 			ft_split_charset.c\
+			ft_stpcpy.c\
+			ft_stpncpy.c\
 			ft_strcat.c\
 			ft_strchr.c\
 			ft_strchrs.c\
@@ -97,8 +95,11 @@ STR =		ft_nbr_words_charset.c\
 			ft_strcpy.c\
 			ft_strdel.c\
 			ft_strdup.c\
+			ft_strendstr.c\
 			ft_strequ.c\
 			ft_strisall.c\
+			ft_strisint.c\
+			ft_strisuint.c\
 			ft_striter.c\
 			ft_striteri.c\
 			ft_strjoin.c\
@@ -107,6 +108,7 @@ STR =		ft_nbr_words_charset.c\
 			ft_strmap.c\
 			ft_strmapi.c\
 			ft_strmjoin.c\
+			ft_strnbrlen.c\
 			ft_strncat.c\
 			ft_strnchr.c\
 			ft_strncmp.c\
