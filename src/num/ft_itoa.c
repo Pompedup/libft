@@ -6,13 +6,14 @@
 /*   By: abezanni <abezanni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/09 10:08:48 by abezanni          #+#    #+#             */
-/*   Updated: 2018/05/04 10:51:28 by abezanni         ###   ########.fr       */
+/*   Updated: 2018/11/29 19:23:00 by abezanni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "basics.h"
+#include <stdlib.h>
 
-static void	ft_rec_itoa(char *back, int n, int i)
+static void	ft_rec_itoa(char *back, int n, size_t i)
 {
 	if (n < 0)
 	{
@@ -35,11 +36,11 @@ static void	ft_rec_itoa(char *back, int n, int i)
 char		*ft_itoa(int n)
 {
 	char	*back;
-	int		len;
+	size_t	len;
 
 	if (n == 0)
 		return (ft_strdup("0"));
-	len = ft_nbr_len(n);
+	len = ft_nbrlen(n);
 	if (!(back = (char*)malloc(len + 1)))
 		return (NULL);
 	back[len] = 0;

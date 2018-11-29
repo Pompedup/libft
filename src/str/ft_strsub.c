@@ -6,11 +6,12 @@
 /*   By: abezanni <abezanni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/08 23:50:52 by abezanni          #+#    #+#             */
-/*   Updated: 2018/05/04 10:36:58 by abezanni         ###   ########.fr       */
+/*   Updated: 2018/11/29 18:41:21 by abezanni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "basics.h"
+#include <stdlib.h>
 
 /*
 **	Copie len caracteres de la chaine str depuis la position start

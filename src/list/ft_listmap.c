@@ -6,11 +6,11 @@
 /*   By: abezanni <abezanni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/09 14:10:58 by abezanni          #+#    #+#             */
-/*   Updated: 2018/06/08 15:06:38 by abezanni         ###   ########.fr       */
+/*   Updated: 2018/11/29 18:33:48 by abezanni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "basics.h"
 
 t_list	*ft_listmap(t_list *lst, t_list *(*f)(t_list *elem))
 {

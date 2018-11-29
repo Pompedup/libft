@@ -6,15 +6,15 @@
 /*   By: abezanni <abezanni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/12/04 12:09:36 by abezanni          #+#    #+#             */
-/*   Updated: 2017/12/12 13:23:29 by abezanni         ###   ########.fr       */
+/*   Updated: 2018/11/29 19:19:05 by abezanni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include <string.h>
 
-int	ft_nbr_len(int n)
+size_t	ft_nbrlen(int n)
 {
-	int back;
+	size_t back;
 
 	back = 0;
 	if (n < 0 || n == 0)

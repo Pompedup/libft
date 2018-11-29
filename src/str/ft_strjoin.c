@@ -6,11 +6,12 @@
 /*   By: abezanni <abezanni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/08 23:58:59 by abezanni          #+#    #+#             */
-/*   Updated: 2018/02/26 18:13:54 by abezanni         ###   ########.fr       */
+/*   Updated: 2018/11/29 18:46:30 by abezanni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "basics.h"
+#include <stdlib.h>
 
 char	*ft_strjoin(const char *s1, const char *s2)
 {

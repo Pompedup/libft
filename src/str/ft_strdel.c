@@ -6,11 +6,11 @@
 /*   By: abezanni <abezanni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/08 17:29:26 by abezanni          #+#    #+#             */
-/*   Updated: 2018/01/10 22:32:18 by abezanni         ###   ########.fr       */
+/*   Updated: 2018/11/29 18:48:25 by abezanni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include <stdlib.h>
 
 void	ft_strdel(char **as)
 {

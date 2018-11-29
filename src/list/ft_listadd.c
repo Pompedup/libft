@@ -6,11 +6,11 @@
 /*   By: abezanni <abezanni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/09 14:02:13 by abezanni          #+#    #+#             */
-/*   Updated: 2018/06/08 15:06:11 by abezanni         ###   ########.fr       */
+/*   Updated: 2018/11/29 18:12:56 by abezanni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "struct.h"
 
 void	ft_listadd(t_list **alst, t_list *new)
 {

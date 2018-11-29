@@ -6,11 +6,9 @@
 /*   By: abezanni <abezanni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/06 17:24:06 by abezanni          #+#    #+#             */
-/*   Updated: 2018/01/13 14:00:46 by abezanni         ###   ########.fr       */
+/*   Updated: 2018/11/29 17:39:21 by abezanni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include "libft.h"
 
 int	ft_tolower(int c)
 {

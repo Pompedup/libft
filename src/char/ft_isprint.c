@@ -6,11 +6,9 @@
 /*   By: abezanni <abezanni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/06 15:56:15 by abezanni          #+#    #+#             */
-/*   Updated: 2018/03/21 14:51:56 by abezanni         ###   ########.fr       */
+/*   Updated: 2018/11/29 17:39:07 by abezanni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include "libft.h"
 
 int	ft_isprint(int c)
 {

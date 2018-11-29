@@ -6,11 +6,12 @@
 /*   By: abezanni <abezanni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/12/12 14:38:10 by abezanni          #+#    #+#             */
-/*   Updated: 2018/10/05 19:20:05 by abezanni         ###   ########.fr       */
+/*   Updated: 2018/11/29 18:27:11 by abezanni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
+#include <unistd.h>
 
 static void	ft_init(t_printf *dt, int fd, char *str, char option)
 {

@@ -6,15 +6,15 @@
 /*   By: abezanni <abezanni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/08 17:52:33 by abezanni          #+#    #+#             */
-/*   Updated: 2018/01/10 21:38:48 by abezanni         ###   ########.fr       */
+/*   Updated: 2018/11/29 19:03:51 by abezanni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include <string.h>
 
 int	ft_strequ(char const *s1, char const *s2)
 {
-	int i;
+	size_t i;
 
 	i = 0;
 	if (!s1 || !s2)

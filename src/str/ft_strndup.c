@@ -6,11 +6,12 @@
 /*   By: abezanni <abezanni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/30 13:18:20 by abezanni          #+#    #+#             */
-/*   Updated: 2018/05/04 10:38:13 by abezanni         ###   ########.fr       */
+/*   Updated: 2018/11/29 18:43:15 by abezanni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "basics.h"
+#include <stdlib.h>
 
 /*
 **	Fais une copie des n premiers charactere de la chaine str

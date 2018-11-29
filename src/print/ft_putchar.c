@@ -6,11 +6,11 @@
 /*   By: abezanni <abezanni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/09 10:33:05 by abezanni          #+#    #+#             */
-/*   Updated: 2017/11/10 12:44:44 by abezanni         ###   ########.fr       */
+/*   Updated: 2018/11/29 17:52:01 by abezanni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include <unistd.h>
 
 void	ft_putchar(int c)
 {

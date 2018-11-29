@@ -6,11 +6,11 @@
 /*   By: abezanni <abezanni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/08 16:06:56 by abezanni          #+#    #+#             */
-/*   Updated: 2018/05/04 10:39:08 by abezanni         ###   ########.fr       */
+/*   Updated: 2018/11/29 18:44:04 by abezanni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include <string.h>
 
 int	ft_strncmp(const char *s1, const char *s2, size_t len)
 {

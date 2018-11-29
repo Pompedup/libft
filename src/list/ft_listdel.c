@@ -6,11 +6,11 @@
 /*   By: abezanni <abezanni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/09 13:56:51 by abezanni          #+#    #+#             */
-/*   Updated: 2018/06/08 15:08:05 by abezanni         ###   ########.fr       */
+/*   Updated: 2018/11/29 18:33:29 by abezanni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "basics.h"
 
 void	ft_listdel(t_list **alst, void (*del)(void *, size_t))
 {

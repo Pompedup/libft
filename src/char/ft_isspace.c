@@ -6,11 +6,9 @@
 /*   By: abezanni <abezanni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/14 10:03:16 by abezanni          #+#    #+#             */
-/*   Updated: 2017/11/14 10:14:44 by abezanni         ###   ########.fr       */
+/*   Updated: 2018/11/29 17:39:12 by abezanni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include "libft.h"
 
 int	ft_isspace(int c)
 {

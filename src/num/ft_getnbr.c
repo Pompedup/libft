@@ -6,11 +6,11 @@
 /*   By: abezanni <abezanni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/06/08 14:46:07 by abezanni          #+#    #+#             */
-/*   Updated: 2018/10/13 17:41:59 by abezanni         ###   ########.fr       */
+/*   Updated: 2018/11/29 18:35:45 by abezanni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "basics.h"
 
 t_bool	ft_getnbr(char *str, int *value)
 {

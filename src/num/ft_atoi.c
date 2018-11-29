@@ -6,18 +6,18 @@
 /*   By: abezanni <abezanni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/06 16:44:36 by abezanni          #+#    #+#             */
-/*   Updated: 2018/01/20 17:32:21 by abezanni         ###   ########.fr       */
+/*   Updated: 2018/11/29 18:52:29 by abezanni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "basics.h"
 
 int	ft_atoi(const char *str)
 {
-	int i;
-	int deb;
-	int signe;
-	int back;
+	size_t	i;
+	size_t	deb;
+	int		signe;
+	int		back;
 
 	i = 0;
 	signe = 1;

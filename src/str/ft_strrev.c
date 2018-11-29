@@ -6,20 +6,20 @@
 /*   By: abezanni <abezanni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/07/19 17:52:25 by ccoupez           #+#    #+#             */
-/*   Updated: 2018/09/02 14:33:02 by abezanni         ###   ########.fr       */
+/*   Updated: 2018/11/29 19:12:02 by abezanni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "basics.h"
 
 void	ft_strrev(char *str)
 {
-	int		start;
-	int		len;
+	size_t	start;
+	size_t	len;
 	char	tmp;
 
 	start = 0;
-	len = (int)ft_strlen(str) - 1;
+	len = ft_strlen(str) - 1;
 	while (start < len)
 	{
 		tmp = str[start];

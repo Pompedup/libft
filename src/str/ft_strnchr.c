@@ -6,15 +6,15 @@
 /*   By: abezanni <abezanni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/06 17:09:41 by abezanni          #+#    #+#             */
-/*   Updated: 2018/09/03 22:43:59 by abezanni         ###   ########.fr       */
+/*   Updated: 2018/11/29 19:02:53 by abezanni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include <string.h>
 
-char	*ft_strnchr(const char *s, int c, int len)
+char	*ft_strnchr(const char *s, int c, size_t len)
 {
-	int i;
+	size_t i;
 
 	i = 0;
 	while (s && s[i] && s[i] != c && i < len)

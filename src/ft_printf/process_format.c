@@ -6,11 +6,12 @@
 /*   By: abezanni <abezanni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/08/16 13:49:32 by abezanni          #+#    #+#             */
-/*   Updated: 2018/10/21 17:39:04 by abezanni         ###   ########.fr       */
+/*   Updated: 2018/11/29 18:31:11 by abezanni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
+#include <unistd.h>
 
 static void	get_data(t_printf *dt, t_flags *dt_flags, char type)
 {

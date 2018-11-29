@@ -6,11 +6,11 @@
 /*   By: abezanni <abezanni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/10/10 15:34:16 by abezanni          #+#    #+#             */
-/*   Updated: 2018/10/13 17:21:42 by abezanni         ###   ########.fr       */
+/*   Updated: 2018/11/29 18:44:48 by abezanni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "basics.h"
 
 t_bool	ft_strnbrlen(char *str, size_t *len)
 {

@@ -6,15 +6,15 @@
 /*   By: abezanni <abezanni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/06 19:08:44 by abezanni          #+#    #+#             */
-/*   Updated: 2018/05/06 19:28:58 by abezanni         ###   ########.fr       */
+/*   Updated: 2018/11/29 19:00:40 by abezanni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include <string.h>
 
 int	ft_strstrtochar(char *str, char *to_find, char c)
 {
-	int i;
+	size_t i;
 
 	i = 0;
 	while (to_find[i] == str[i] && to_find[i])

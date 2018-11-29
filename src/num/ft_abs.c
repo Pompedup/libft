@@ -6,13 +6,11 @@
 /*   By: abezanni <abezanni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/06/18 20:12:08 by abezanni          #+#    #+#             */
-/*   Updated: 2018/06/18 20:13:21 by abezanni         ###   ########.fr       */
+/*   Updated: 2018/11/29 19:21:32 by abezanni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
-
-int	ft_abs(int value)
+unsigned int	ft_abs(int value)
 {
 	return (value < 0 ? -value : value);
 }

@@ -6,14 +6,16 @@
 /*   By: abezanni <abezanni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/31 17:14:33 by abezanni          #+#    #+#             */
-/*   Updated: 2018/05/31 17:19:12 by abezanni         ###   ########.fr       */
+/*   Updated: 2018/11/29 18:55:02 by abezanni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_int_tab_cmp(int *tab1, int *tab2, int size1, int size2)
+#include <string.h>
+
+int	ft_int_tab_cmp(int *tab1, int *tab2, size_t size1, size_t size2)
 {
-	int i;
-	int j;
+	size_t i;
+	size_t j;
 
 	i = 0;
 	while (i < size1)

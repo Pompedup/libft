@@ -6,11 +6,11 @@
 /*   By: abezanni <abezanni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/06 16:56:33 by abezanni          #+#    #+#             */
-/*   Updated: 2017/11/17 15:44:39 by abezanni         ###   ########.fr       */
+/*   Updated: 2018/11/29 18:25:11 by abezanni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include <string.h>
 
 void	*ft_memccpy(void *dest, const void *src, int c, size_t n)
 {

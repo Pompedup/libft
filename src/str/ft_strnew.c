@@ -6,11 +6,12 @@
 /*   By: abezanni <abezanni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/08 17:25:19 by abezanni          #+#    #+#             */
-/*   Updated: 2018/05/04 10:34:02 by abezanni         ###   ########.fr       */
+/*   Updated: 2018/11/29 18:42:29 by abezanni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "basics.h"
+#include <stdlib.h>
 
 /*
 **	Cree une chaine de size + 1 characteres initialises a 0

@@ -6,11 +6,11 @@
 /*   By: abezanni <abezanni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/09 01:04:26 by abezanni          #+#    #+#             */
-/*   Updated: 2018/05/04 10:32:40 by abezanni         ###   ########.fr       */
+/*   Updated: 2018/11/29 18:38:55 by abezanni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "basics.h"
 
 /*
 **	Decoupe la chaine str en fonction du caractere c

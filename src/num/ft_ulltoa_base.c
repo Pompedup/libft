@@ -6,11 +6,12 @@
 /*   By: abezanni <abezanni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/02/26 17:47:36 by abezanni          #+#    #+#             */
-/*   Updated: 2018/02/26 17:48:32 by abezanni         ###   ########.fr       */
+/*   Updated: 2018/11/29 19:16:02 by abezanni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "basics.h"
+#include <stdlib.h>
 
 /*
 ** Insersion des données dans la variable de retour avec
@@ -18,7 +19,7 @@
 */
 
 static void	ft_ulltoa_insert(char *back, int base,
-	unsigned long long val, int maj)
+	unsigned long long val, t_bool maj)
 {
 	*(back--) = 0;
 	while (val)
@@ -39,10 +40,10 @@ static void	ft_ulltoa_insert(char *back, int base,
 ** si hexadecimal majuscule
 */
 
-char		*ft_ulltoa_base(unsigned long long value, int base, int maj)
+char		*ft_ulltoa_base(unsigned long long value, int base, t_bool maj)
 {
 	char				*back;
-	int					i;
+	size_t				i;
 	unsigned long long	save;
 
 	if (base < 2 || base > 16)

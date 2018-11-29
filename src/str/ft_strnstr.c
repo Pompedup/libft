@@ -6,11 +6,11 @@
 /*   By: abezanni <abezanni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/07 20:52:28 by abezanni          #+#    #+#             */
-/*   Updated: 2018/05/04 10:06:41 by abezanni         ###   ########.fr       */
+/*   Updated: 2018/11/29 18:39:57 by abezanni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include <string.h>
 
 /*
 **	Cherche la chaine to_find dans les len premiers caracteres de str

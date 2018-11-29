@@ -6,15 +6,15 @@
 /*   By: abezanni <abezanni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/07/19 17:52:25 by ccoupez           #+#    #+#             */
-/*   Updated: 2018/09/02 14:34:05 by abezanni         ###   ########.fr       */
+/*   Updated: 2018/11/29 19:25:08 by abezanni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include <string.h>
 
-void	ft_memrev(void *src, int len)
+void	ft_memrev(void *src, size_t len)
 {
-	int		start;
+	size_t	start;
 	char	*str;
 	char	tmp;
 

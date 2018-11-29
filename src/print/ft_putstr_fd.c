@@ -6,15 +6,14 @@
 /*   By: abezanni <abezanni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/09 12:15:31 by abezanni          #+#    #+#             */
-/*   Updated: 2017/12/12 13:34:15 by abezanni         ###   ########.fr       */
+/*   Updated: 2018/11/29 18:50:51 by abezanni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "basics.h"
+#include <unistd.h>
 
 void	ft_putstr_fd(char const *s, int fd)
 {
-	if (!s)
-		return ;
 	write(fd, s, ft_strlen(s));
 }

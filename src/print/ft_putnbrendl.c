@@ -6,11 +6,12 @@
 /*   By: abezanni <abezanni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/03/16 16:00:16 by abezanni          #+#    #+#             */
-/*   Updated: 2018/03/16 16:02:22 by abezanni         ###   ########.fr       */
+/*   Updated: 2018/11/29 18:51:33 by abezanni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "basics.h"
+#include <unistd.h>
 
 void	ft_putnbrendl(int n)
 {

@@ -6,11 +6,12 @@
 /*   By: abezanni <abezanni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/09 13:27:14 by abezanni          #+#    #+#             */
-/*   Updated: 2018/09/20 15:21:37 by abezanni         ###   ########.fr       */
+/*   Updated: 2018/11/29 18:22:48 by abezanni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "struct.h"
+#include <stdlib.h>
 
 void	ft_lstremoveone(t_list **alst, size_t content_size)
 {

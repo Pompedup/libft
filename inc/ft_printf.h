@@ -6,17 +6,17 @@
 /*   By: abezanni <abezanni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/12/12 14:38:37 by abezanni          #+#    #+#             */
-/*   Updated: 2018/10/21 17:36:24 by abezanni         ###   ########.fr       */
+/*   Updated: 2018/11/29 18:35:02 by abezanni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef FT_PRINTF_H
 # define FT_PRINTF_H
 
-# include "libft.h"
+# include "basics.h"
+# include <stdarg.h>
+# include <stdlib.h>
 
-# define HEXAMIN	"0123456789abcdef"
-# define HEXAMAX	"0123456789ABCDEF"
 # define CONV		"sSpbdDioOuUxXcC%"
 # define FLAG		".+ -0#hhlljz*"
 # define DOT		(1 << 0)

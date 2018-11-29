@@ -6,15 +6,15 @@
 /*   By: abezanni <abezanni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/06 16:36:49 by abezanni          #+#    #+#             */
-/*   Updated: 2018/01/10 22:43:20 by abezanni         ###   ########.fr       */
+/*   Updated: 2018/11/29 19:03:36 by abezanni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include <string.h>
 
 char	*ft_strcat(char *dst, const char *src)
 {
-	int i;
+	size_t i;
 
 	i = 0;
 	while (dst[i])

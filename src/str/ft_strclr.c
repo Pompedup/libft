@@ -6,11 +6,9 @@
 /*   By: abezanni <abezanni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/08 17:31:53 by abezanni          #+#    #+#             */
-/*   Updated: 2018/01/10 22:48:21 by abezanni         ###   ########.fr       */
+/*   Updated: 2018/11/29 18:48:53 by abezanni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include "libft.h"
 
 void	ft_strclr(char *s)
 {

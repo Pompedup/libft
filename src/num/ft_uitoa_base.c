@@ -6,13 +6,15 @@
 /*   By: abezanni <abezanni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/12/16 15:45:19 by abezanni          #+#    #+#             */
-/*   Updated: 2017/12/16 15:45:30 by abezanni         ###   ########.fr       */
+/*   Updated: 2018/11/29 19:38:50 by abezanni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "basics.h"
+#include <stdlib.h>
 
-static void	ft_uitoa_insert(char *back, long long base, long long val, int maj)
+static void	ft_uitoa_insert(char *back, long long base, long long val,\
+																	t_bool maj)
 {
 	while (val)
 	{
@@ -26,10 +28,10 @@ static void	ft_uitoa_insert(char *back, long long base, long long val, int maj)
 	}
 }
 
-char		*ft_uitoa_base(unsigned int value, int base, int maj)
+char		*ft_uitoa_base(unsigned int value, int base, t_bool maj)
 {
 	char		*back;
-	int			i;
+	size_t		i;
 	long long	lvalue;
 	long long	lsave;
 	long long	lbase;

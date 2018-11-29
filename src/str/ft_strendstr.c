@@ -6,11 +6,11 @@
 /*   By: abezanni <abezanni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/10/13 15:58:38 by abezanni          #+#    #+#             */
-/*   Updated: 2018/10/13 16:05:17 by abezanni         ###   ########.fr       */
+/*   Updated: 2018/11/29 18:47:57 by abezanni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include <string.h>
 
 /*
 **	Verifie si str finit par to_find
@@ -18,8 +18,8 @@
 
 char	*ft_strendstr(const char *str, const char *to_find)
 {
-	int i;
-	int j;
+	size_t i;
+	size_t j;
 
 	i = 0;
 	j = 0;

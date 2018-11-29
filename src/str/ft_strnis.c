@@ -6,11 +6,11 @@
 /*   By: abezanni <abezanni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/24 17:43:14 by abezanni          #+#    #+#             */
-/*   Updated: 2018/09/24 18:54:39 by abezanni         ###   ########.fr       */
+/*   Updated: 2018/11/29 18:40:05 by abezanni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include <string.h>
 
 int	ft_strnis(char *str, int (*f)(int c), size_t len)
 {

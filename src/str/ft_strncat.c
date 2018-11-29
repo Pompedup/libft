@@ -6,14 +6,16 @@
 /*   By: abezanni <abezanni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/09 17:55:19 by abezanni          #+#    #+#             */
-/*   Updated: 2017/11/09 17:55:21 by abezanni         ###   ########.fr       */
+/*   Updated: 2018/11/29 19:05:27 by abezanni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char	*ft_strncat(char *dest, char *src, int nb)
+#include <string.h>
+
+char	*ft_strncat(char *dest, char *src, size_t nb)
 {
-	int i;
-	int j;
+	size_t i;
+	size_t j;
 
 	i = 0;
 	while (dest[i])

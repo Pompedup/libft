@@ -6,11 +6,9 @@
 /*   By: abezanni <abezanni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/06 17:27:34 by abezanni          #+#    #+#             */
-/*   Updated: 2018/02/26 18:14:47 by abezanni         ###   ########.fr       */
+/*   Updated: 2018/11/29 17:39:26 by abezanni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include "libft.h"
 
 int	ft_toupper(int c)
 {

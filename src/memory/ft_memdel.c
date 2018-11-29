@@ -6,11 +6,11 @@
 /*   By: abezanni <abezanni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/08 16:59:25 by abezanni          #+#    #+#             */
-/*   Updated: 2017/11/12 17:37:58 by abezanni         ###   ########.fr       */
+/*   Updated: 2018/11/29 17:44:51 by abezanni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include <stdlib.h>
 
 void	ft_memdel(void **ap)
 {

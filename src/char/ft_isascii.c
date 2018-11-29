@@ -6,11 +6,9 @@
 /*   By: abezanni <abezanni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/06 15:55:18 by abezanni          #+#    #+#             */
-/*   Updated: 2018/03/21 12:19:46 by abezanni         ###   ########.fr       */
+/*   Updated: 2018/11/29 17:37:39 by abezanni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include "libft.h"
 
 int	ft_isascii(int c)
 {

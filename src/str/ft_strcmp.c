@@ -6,11 +6,9 @@
 /*   By: abezanni <abezanni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/06 17:15:12 by abezanni          #+#    #+#             */
-/*   Updated: 2018/09/25 13:13:29 by abezanni         ###   ########.fr       */
+/*   Updated: 2018/11/29 18:48:47 by abezanni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include "libft.h"
 
 int	ft_strcmp(const char *s1, const char *s2)
 {

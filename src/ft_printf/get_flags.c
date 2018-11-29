@@ -6,7 +6,7 @@
 /*   By: abezanni <abezanni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/08/18 16:55:07 by abezanni          #+#    #+#             */
-/*   Updated: 2018/10/20 21:36:31 by abezanni         ###   ########.fr       */
+/*   Updated: 2018/11/29 19:28:40 by abezanni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,7 +49,7 @@ char		*get_flags(t_printf *dt, char *format, t_flags *dt_flags)
 		if (tmp == -1 || tmp == 12)
 		{
 			dt_flags->space = tmp == 12 ? get_star(dt) : ft_atoi(format);
-			format += tmp == 12 ? 0 : ft_nbr_len(dt_flags->space) - 1;
+			format += tmp == 12 ? 0 : ft_nbrlen(dt_flags->space) - 1;
 		}
 		format++;
 		if (1 << tmp == DOT)

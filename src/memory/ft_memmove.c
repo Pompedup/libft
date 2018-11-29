@@ -6,11 +6,11 @@
 /*   By: abezanni <abezanni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/07 22:16:58 by abezanni          #+#    #+#             */
-/*   Updated: 2017/11/14 00:10:01 by abezanni         ###   ########.fr       */
+/*   Updated: 2018/11/29 18:25:57 by abezanni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include <string.h>
 
 void	*ft_memmove(void *dest, const void *src, size_t n)
 {

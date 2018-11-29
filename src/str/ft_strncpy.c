@@ -6,11 +6,11 @@
 /*   By: abezanni <abezanni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/06 17:21:59 by abezanni          #+#    #+#             */
-/*   Updated: 2018/05/04 10:49:48 by abezanni         ###   ########.fr       */
+/*   Updated: 2018/11/29 18:43:36 by abezanni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include <string.h>
 
 /*
 **	Copie len caractere de la chaine src dans la chaine dest

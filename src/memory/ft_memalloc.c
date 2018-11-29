@@ -6,11 +6,12 @@
 /*   By: abezanni <abezanni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/08 16:36:31 by abezanni          #+#    #+#             */
-/*   Updated: 2017/11/08 21:47:49 by abezanni         ###   ########.fr       */
+/*   Updated: 2018/11/29 18:34:21 by abezanni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "basics.h"
+#include <stdlib.h>
 
 void	*ft_memalloc(size_t size)
 {

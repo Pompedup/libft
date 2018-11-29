@@ -6,11 +6,11 @@
 /*   By: abezanni <abezanni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/07 19:02:27 by abezanni          #+#    #+#             */
-/*   Updated: 2017/11/10 10:44:50 by abezanni         ###   ########.fr       */
+/*   Updated: 2018/11/29 18:25:31 by abezanni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include <string.h>
 
 int	ft_memcmp(const void *s1, const void *s2, size_t n)
 {

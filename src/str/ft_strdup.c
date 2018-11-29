@@ -6,11 +6,12 @@
 /*   By: abezanni <abezanni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/06 17:16:51 by abezanni          #+#    #+#             */
-/*   Updated: 2018/05/04 10:47:36 by abezanni         ###   ########.fr       */
+/*   Updated: 2018/11/29 18:48:14 by abezanni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "basics.h"
+#include <stdlib.h>
 
 char	*ft_strdup(const char *src)
 {

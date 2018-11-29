@@ -6,11 +6,12 @@
 /*   By: abezanni <abezanni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/06/08 15:13:43 by abezanni          #+#    #+#             */
-/*   Updated: 2018/06/23 17:01:30 by abezanni         ###   ########.fr       */
+/*   Updated: 2018/11/29 18:21:59 by abezanni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "struct.h"
+#include <stdlib.h>
 
 void	ft_lstdelone(t_lst *lst, size_t to_free)
 {

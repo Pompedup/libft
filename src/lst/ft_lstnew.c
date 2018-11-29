@@ -6,11 +6,12 @@
 /*   By: abezanni <abezanni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/06/08 15:10:14 by abezanni          #+#    #+#             */
-/*   Updated: 2018/08/18 16:18:28 by abezanni         ###   ########.fr       */
+/*   Updated: 2018/11/29 18:22:12 by abezanni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "struct.h"
+#include <stdlib.h>
 
 t_lst	*ft_lstnew(void *first, void *second, void *third, int nb)
 {

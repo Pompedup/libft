@@ -6,11 +6,11 @@
 /*   By: abezanni <abezanni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/06/08 14:58:08 by abezanni          #+#    #+#             */
-/*   Updated: 2018/10/13 17:28:53 by abezanni         ###   ########.fr       */
+/*   Updated: 2018/11/29 19:13:53 by abezanni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "basics.h"
 
 t_bool	ft_strisuint(char *str, size_t len)
 {

@@ -6,11 +6,9 @@
 /*   By: abezanni <abezanni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/08/30 15:11:55 by abezanni          #+#    #+#             */
-/*   Updated: 2018/10/21 17:40:08 by abezanni         ###   ########.fr       */
+/*   Updated: 2018/11/29 17:50:56 by abezanni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include "libft.h"
 
 int	ft_smallest(int a, int b)
 {

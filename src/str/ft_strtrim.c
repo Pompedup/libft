@@ -6,11 +6,12 @@
 /*   By: abezanni <abezanni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/09 00:10:52 by abezanni          #+#    #+#             */
-/*   Updated: 2018/05/04 10:48:00 by abezanni         ###   ########.fr       */
+/*   Updated: 2018/11/29 18:41:30 by abezanni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "basics.h"
+#include <stdlib.h>
 
 /*
 **	Enleve les espaces au debut et a la fin de la chaine str

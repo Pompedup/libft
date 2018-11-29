@@ -6,11 +6,11 @@
 /*   By: abezanni <abezanni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/08 16:07:30 by abezanni          #+#    #+#             */
-/*   Updated: 2017/11/13 16:36:25 by abezanni         ###   ########.fr       */
+/*   Updated: 2018/11/29 18:46:10 by abezanni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "basics.h"
 
 size_t	ft_strlcat(char *dest, const char *src, size_t size)
 {

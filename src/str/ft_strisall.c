@@ -3,14 +3,12 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strisall.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ccoupez <ccoupez@student.42.fr>            +#+  +:+       +#+        */
+/*   By: abezanni <abezanni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/03/20 17:24:23 by abezanni          #+#    #+#             */
-/*   Updated: 2018/06/06 14:14:16 by ccoupez          ###   ########.fr       */
+/*   Updated: 2018/11/29 18:47:13 by abezanni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include "libft.h"
 
 int	ft_strisall(char *str, int (*f)(int c))
 {

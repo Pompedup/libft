@@ -3,18 +3,18 @@
 /*                                                        :::      ::::::::   */
 /*   ft_nbr_words_charset.c                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ccoupez <ccoupez@student.42.fr>            +#+  +:+       +#+        */
+/*   By: abezanni <abezanni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/02 11:59:08 by abezanni          #+#    #+#             */
-/*   Updated: 2018/06/06 14:11:03 by ccoupez          ###   ########.fr       */
+/*   Updated: 2018/11/29 19:14:51 by abezanni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "basics.h"
 
-int	ft_nbr_words_charset(char *str, char *charset)
+size_t	ft_nbr_words_charset(char *str, char *charset)
 {
-	int back;
+	size_t back;
 
 	back = !ft_strchr(charset, *str) ? 1 : 0;
 	while (*str)

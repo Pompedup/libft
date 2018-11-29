@@ -6,11 +6,9 @@
 /*   By: abezanni <abezanni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/08/30 15:10:50 by abezanni          #+#    #+#             */
-/*   Updated: 2018/10/21 17:40:01 by abezanni         ###   ########.fr       */
+/*   Updated: 2018/11/29 17:48:48 by abezanni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include "libft.h"
 
 int	ft_biggest(int a, int b)
 {
