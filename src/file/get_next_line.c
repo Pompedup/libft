@@ -6,12 +6,13 @@
 /*   By: abezanni <abezanni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/29 12:47:14 by abezanni          #+#    #+#             */
-/*   Updated: 2018/11/29 19:38:35 by abezanni         ###   ########.fr       */
+/*   Updated: 2018/12/04 11:29:02 by abezanni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "get_next_line.h"
 #include <unistd.h>
+#include <stdlib.h>
 
 static t_list	*ft_find_fd(t_list **lst, size_t fd)
 {
